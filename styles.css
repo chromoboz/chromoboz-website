@@ -1309,3 +1309,192 @@ h2 {
   }
 
 }
+/* =========================
+   PRESENCE / MAP SECTION
+========================= */
+
+.presence-section {
+  padding: 110px 5%;
+  background: linear-gradient(180deg, #151716 0%, #111312 100%);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.presence-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 42px;
+  align-items: center;
+}
+
+.presence-content h2 {
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.98;
+  margin: 18px 0 22px;
+  color: #f5f2ea;
+}
+
+.presence-content h2 em {
+  color: #ff7a2f;
+  font-style: normal;
+}
+
+.presence-intro {
+  max-width: 640px;
+  color: rgba(245, 242, 234, 0.78);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.presence-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.presence-metric {
+  padding: 22px 22px;
+  background: #171918;
+  border: 1px solid rgba(255,255,255,0.08);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-number {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #ff7a2f;
+}
+
+.metric-label {
+  color: rgba(245, 242, 234, 0.85);
+  font-size: 0.95rem;
+}
+
+.presence-list {
+  display: grid;
+  gap: 18px;
+}
+
+.presence-item {
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.presence-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #f5f2ea;
+  font-size: 0.98rem;
+}
+
+.presence-item p {
+  margin: 0;
+  color: rgba(245, 242, 234, 0.72);
+  line-height: 1.75;
+}
+
+.presence-map-card {
+  background: #181b19;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px;
+}
+
+.map-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.map-title-row h3 {
+  margin: 0;
+  color: #f5f2ea;
+  font-size: 1.35rem;
+}
+
+.map-title-row span {
+  color: #ff7a2f;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.greece-map {
+  width: 100%;
+  height: auto;
+  display: block;
+  background:
+    radial-gradient(circle at top, rgba(255,122,47,0.08), transparent 40%),
+    linear-gradient(180deg, #111312 0%, #141716 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 14px;
+}
+
+.greece-land {
+  fill: #232825;
+  stroke: rgba(255,255,255,0.08);
+  stroke-width: 2;
+}
+
+.greece-island {
+  fill: #232825;
+}
+
+.map-point circle {
+  fill: #ff7a2f;
+  stroke: rgba(255,255,255,0.95);
+  stroke-width: 2;
+}
+
+.map-point text {
+  fill: #f5f2ea;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.map-legend {
+  margin-top: 16px;
+  color: rgba(245, 242, 234, 0.72);
+  font-size: 0.92rem;
+}
+
+.map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff7a2f;
+  display: inline-block;
+}
+
+@media (max-width: 1100px) {
+  .presence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .presence-section {
+    padding: 80px 5%;
+  }
+
+  .presence-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .map-point text {
+    font-size: 11px;
+  }
+}
