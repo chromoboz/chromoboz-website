@@ -941,3 +941,123 @@ h2 {
   }
 
 }
+/* =========================================
+   MAP FIX — CURRENT HTML
+========================================= */
+
+.location {
+  position: absolute;
+  z-index: 10;
+
+  width: 18px;
+  height: 18px;
+
+  display: block;
+
+  font-size: 0;
+}
+
+/* Turuncu nokta */
+
+.location i {
+  position: absolute;
+  inset: 3px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #f2762e;
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 5px rgba(242, 118, 46, 0.15),
+    0 0 16px rgba(242, 118, 46, 0.65);
+}
+
+/* Şehir adı normalde görünmesin */
+
+.location b {
+  position: absolute;
+
+  left: 50%;
+  bottom: 28px;
+
+  transform: translateX(-50%) translateY(5px);
+
+  padding: 6px 9px;
+
+  background: rgba(8, 10, 8, 0.96);
+
+  color: #ffffff;
+
+  border-radius: 3px;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* Mouse gelince şehir adı çıksın */
+
+.location:hover b {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================================
+   LOCATIONS
+========================================= */
+
+.location-thessaloniki {
+  top: 18%;
+  left: 48%;
+}
+
+.location-chalkidiki {
+  top: 23%;
+  left: 50%;
+}
+
+.location-kavala {
+  top: 16.5%;
+  left: 57%;
+}
+
+.location-alexandroupoli {
+  top: 17%;
+  left: 65%;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+  .location {
+    width: 15px;
+    height: 15px;
+  }
+
+  .location i {
+    width: 10px;
+    height: 10px;
+  }
+
+  .location b {
+    font-size: 9px;
+  }
+
+}
