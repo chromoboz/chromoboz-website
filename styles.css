@@ -1,35 +1,18 @@
 @charset "UTF-8";
 
-/* =========================================================
-   CHROMO BOZ — CORPORATE WEBSITE
-   ========================================================= */
-
 :root {
   --bg: #101210;
   --bg-soft: #151815;
   --panel: #1b1f1b;
-  --panel-light: #222722;
-
   --text: #f5f3ed;
-  --muted: #a6ada6;
-  --muted-dark: #737b73;
-
+  --muted: #a7ada7;
   --orange: #f2762e;
   --orange-light: #ff8b47;
-
   --line: #333933;
-  --line-soft: rgba(255, 255, 255, 0.09);
-
   --paper: #f1efe8;
   --paper-text: #1b1d1b;
-
   --max-width: 1500px;
 }
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -63,6 +46,19 @@ button {
   font: inherit;
 }
 
+.shell {
+  width: min(90%, var(--max-width));
+  margin: 0 auto;
+}
+
+.kicker {
+  margin: 0 0 22px;
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.8px;
+}
+
 h1,
 h2,
 h3,
@@ -70,27 +66,23 @@ p {
   margin-top: 0;
 }
 
-::selection {
-  background: var(--orange);
-  color: #111;
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(40px, 4.4vw, 68px);
+  line-height: 1.02;
+  letter-spacing: -2.5px;
+  font-weight: 800;
 }
 
-.shell {
-  width: min(90%, var(--max-width));
-  margin: 0 auto;
-}
 
-
-/* =========================================================
-   TOP BAR
-   ========================================================= */
+/* TOP BAR */
 
 .topbar {
   background: var(--orange);
   color: #151515;
   font-size: 10px;
   font-weight: 900;
-  letter-spacing: 1.15px;
+  letter-spacing: 1.1px;
 }
 
 .topbar-inner {
@@ -102,9 +94,7 @@ p {
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* HEADER */
 
 .header {
   position: relative;
@@ -142,37 +132,10 @@ p {
   font-weight: 700;
 }
 
-.nav > a:not(.nav-button) {
-  position: relative;
-}
-
-.nav > a:not(.nav-button)::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 1px;
-  background: var(--orange);
-  transition: width 0.2s ease;
-}
-
-.nav > a:not(.nav-button):hover::after {
-  width: 100%;
-}
-
 .nav-button {
   padding: 13px 17px;
   background: var(--orange);
   color: #151515;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-.nav-button:hover {
-  background: var(--orange-light);
-  transform: translateY(-1px);
 }
 
 .menu-button {
@@ -182,57 +145,10 @@ p {
   border: 1px solid var(--line);
   background: transparent;
   color: white;
-  cursor: pointer;
 }
 
 
-/* =========================================================
-   GENERAL
-   ========================================================= */
-
-.kicker {
-  margin: 0 0 22px;
-  color: var(--orange);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1.8px;
-}
-
-.dark-kicker {
-  color: #d85f19;
-}
-
-h2 {
-  margin-bottom: 0;
-  font-size: clamp(40px, 4.4vw, 68px);
-  line-height: 1.02;
-  letter-spacing: -2.5px;
-  font-weight: 800;
-}
-
-.section-dark {
-  background: var(--bg);
-}
-
-.section-heading {
-  margin-bottom: 52px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 60px;
-}
-
-.section-heading > p {
-  max-width: 360px;
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-
-/* =========================================================
-   HERO
-   ========================================================= */
+/* HERO */
 
 .hero {
   min-height: 760px;
@@ -275,7 +191,6 @@ h2 {
   min-height: 760px;
   padding-top: 110px;
   padding-bottom: 35px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -320,14 +235,6 @@ h2 {
   justify-content: center;
   font-size: 13px;
   font-weight: 800;
-  transition:
-    transform 0.2s ease,
-    background 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
 }
 
 .primary {
@@ -335,31 +242,22 @@ h2 {
   color: #151515;
 }
 
-.primary:hover {
-  background: var(--orange-light);
-}
-
 .secondary {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(15, 17, 15, 0.38);
-}
-
-.secondary:hover {
-  border-color: var(--orange);
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(15,17,15,0.38);
 }
 
 .hero-stats {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   gap: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
 }
 
 .hero-stats > div {
   min-height: 98px;
   padding: 18px 22px;
-  background: rgba(13, 15, 13, 0.9);
-
+  background: rgba(13,15,13,0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -367,26 +265,22 @@ h2 {
 
 .hero-stats strong {
   font-size: 28px;
-  line-height: 1;
 }
 
 .hero-stats span {
   margin-top: 9px;
   color: #a6ada6;
   font-size: 9px;
-  letter-spacing: 1.25px;
+  letter-spacing: 1.2px;
 }
 
 .wide-stat strong {
   color: var(--orange);
   font-size: 17px;
-  letter-spacing: 0.5px;
 }
 
 
-/* =========================================================
-   INTRO
-   ========================================================= */
+/* INTRO */
 
 .intro {
   padding: 105px 0;
@@ -398,7 +292,6 @@ h2 {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 12%;
-  align-items: start;
 }
 
 .intro-copy {
@@ -407,14 +300,29 @@ h2 {
 }
 
 .intro-copy p {
-  margin-bottom: 22px;
   color: #505650;
 }
 
 
-/* =========================================================
-   SERVICES
-   ========================================================= */
+/* SECTION HEADING */
+
+.section-heading {
+  margin-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.section-heading > p {
+  max-width: 360px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* SERVICES */
 
 .services {
   padding: 110px 0 120px;
@@ -432,19 +340,12 @@ h2 {
   min-height: 420px;
   padding: 28px;
   background: var(--bg-soft);
-
   display: flex;
   flex-direction: column;
-
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
 }
 
 .service-card:hover {
   background: #1e231e;
-  transform: translateY(-6px);
-  z-index: 2;
 }
 
 .service-meta {
@@ -455,35 +356,27 @@ h2 {
   font-weight: 900;
 }
 
-.service-meta span:last-child {
-  font-size: 23px;
-}
-
 .service-card h3 {
   margin: 68px 0 20px;
   font-size: 30px;
   line-height: 1.06;
-  letter-spacing: -1.2px;
 }
 
 .service-card p {
-  margin-bottom: 28px;
   color: var(--muted);
   font-size: 14px;
 }
 
 .service-card small {
   margin-top: auto;
-  color: var(--muted-dark);
+  color: #747a74;
   font-size: 9px;
   font-weight: 800;
-  letter-spacing: 1.25px;
+  letter-spacing: 1.2px;
 }
 
 
-/* =========================================================
-   ABOUT
-   ========================================================= */
+/* ABOUT */
 
 .about {
   padding: 120px 0;
@@ -517,21 +410,8 @@ h2 {
   bottom: 24px;
   min-width: 230px;
   padding: 18px 20px;
-  background: rgba(15, 17, 15, 0.93);
+  background: rgba(15,17,15,0.93);
   border-left: 3px solid var(--orange);
-}
-
-.photo-badge small {
-  display: block;
-  color: #858d85;
-  font-size: 9px;
-  letter-spacing: 1.25px;
-}
-
-.photo-badge strong {
-  display: block;
-  margin-top: 6px;
-  font-size: 20px;
 }
 
 .about-copy .lead {
@@ -542,7 +422,6 @@ h2 {
 }
 
 .about-copy > p:not(.kicker):not(.lead) {
-  max-width: 560px;
   color: var(--muted);
 }
 
@@ -556,18 +435,11 @@ h2 {
 }
 
 
-/* =========================================================
-   PRESENCE
-   ========================================================= */
+/* PRESENCE */
 
 .presence {
   padding: 110px 0;
-  background:
-    linear-gradient(
-      180deg,
-      #0e100e 0%,
-      #151815 100%
-    );
+  background: linear-gradient(180deg, #0e100e 0%, #151815 100%);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -580,7 +452,6 @@ h2 {
 }
 
 .presence-copy h2 {
-  max-width: 760px;
   font-size: clamp(48px, 5vw, 78px);
 }
 
@@ -608,7 +479,6 @@ h2 {
   padding: 22px;
   background: #171a17;
   border: 1px solid var(--line);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -617,7 +487,6 @@ h2 {
 .metric strong {
   color: var(--orange);
   font-size: 39px;
-  line-height: 1;
 }
 
 .metric span {
@@ -631,23 +500,14 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 
-.presence-detail strong {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
 .presence-detail p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.7;
 }
 
 
-/* =========================================================
-   MAP CARD
-   ========================================================= */
+/* MAP */
 
 .map-card {
   padding: 22px;
@@ -658,11 +518,9 @@ h2 {
 .map-header {
   min-height: 42px;
   margin-bottom: 18px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 25px;
 }
 
 .map-header h3 {
@@ -677,12 +535,6 @@ h2 {
   letter-spacing: 1.3px;
 }
 
-
-/* IMPORTANT:
-   Harita resmi 1122 x 1402 civarı yani yaklaşık 4:5.
-   Bu alanı da aynı oranda tutuyoruz.
-*/
-
 .map-stage {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -694,134 +546,126 @@ h2 {
 .map-image {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
   object-position: center;
-
-  user-select: none;
   pointer-events: none;
+  user-select: none;
 }
 
 
-/* =========================================================
-   MAP LOCATIONS
-   ========================================================= */
+/* MAP PINS */
 
-.location {
+.map-pin {
+  width: 18px;
+  height: 18px;
   position: absolute;
   z-index: 5;
-
-  display: flex;
-  align-items: center;
-  gap: 7px;
-
-  color: #fff;
-  font-size: 11px;
-  font-weight: 800;
-
-  white-space: nowrap;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
 }
 
-.location i {
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-
+.map-pin span {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
   border-radius: 50%;
-
   background: var(--orange);
   border: 2px solid white;
-
   box-shadow:
-    0 0 0 5px rgba(242, 118, 46, 0.15),
-    0 0 15px rgba(242, 118, 46, 0.75);
+    0 0 0 5px rgba(242,118,46,0.13),
+    0 0 14px rgba(242,118,46,0.6);
 }
 
-.location b {
-  padding: 5px 7px;
-
-  background: rgba(7, 9, 7, 0.83);
-
+.map-pin b {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translateX(-50%) translateY(4px);
+  padding: 6px 8px;
+  background: rgba(7,9,7,0.94);
+  color: white;
   border-radius: 3px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.18s ease;
+}
 
-  font-size: inherit;
+.map-pin:hover b,
+.map-pin:focus-visible b {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 
-/*
-   NOKTA KONUMLARI
-   Bunlar greece-map-dark.png görseline göre ayarlandı.
+/* APPROXIMATE LOCATIONS */
 
-   Haritayı ekranda gördüğümüzde gerekirse
-   1-2% oynatacağız.
-*/
-
-.location-thessaloniki {
+.pin-thessaloniki {
   top: 20.5%;
   left: 48%;
 }
 
-.location-chalkidiki {
-  top: 25.5%;
-  left: 50.5%;
+.pin-chalkidiki {
+  top: 24.8%;
+  left: 50%;
 }
 
-.location-kavala {
+.pin-kavala {
   top: 19%;
-  left: 58%;
+  left: 57%;
 }
 
-.location-alexandroupoli {
-  top: 20.5%;
-  left: 66%;
+.pin-alexandroupoli {
+  top: 20%;
+  left: 63%;
 }
 
 
-/* Yazılar üst üste binmesin */
+/* CITY LIST */
 
-location-thessaloniki b {
-  transform: translate(-72%, -120%);
+.map-locations {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-.location-chalkidiki b {
-  transform: translate(-5%, 115%);
-}
-
-.location-kavala b {
-  transform: translate(-10%, -120%);
-}
-
-.location-alexandroupoli b {
-  transform: translate(0, 90%);
-}
-
-.map-footer {
-  margin-top: 16px;
-
+.map-locations span {
+  min-height: 58px;
+  padding: 0 14px;
   display: flex;
   align-items: center;
-  gap: 9px;
-
-  color: #858c85;
+  justify-content: center;
+  gap: 8px;
+  color: #c6cbc6;
   font-size: 11px;
+  font-weight: 700;
+  border-right: 1px solid var(--line);
 }
 
-.map-footer i {
-  width: 10px;
-  height: 10px;
+.map-locations span:last-child {
+  border-right: 0;
+}
 
+.map-locations i {
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-
   background: var(--orange);
 }
 
 
-/* =========================================================
-   PROJECTS
-   ========================================================= */
+/* PROJECTS */
 
 .projects {
   padding: 115px 0 125px;
@@ -842,61 +686,36 @@ location-thessaloniki b {
   position: relative;
   display: block;
   overflow: hidden;
-  background: var(--panel-light);
 }
 
 .gallery-link img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-  transition: transform 0.45s ease;
-}
-
-.gallery-link:hover img {
-  transform: scale(1.035);
 }
 
 .gallery-link > span {
   width: 46px;
   height: 46px;
-
   position: absolute;
   right: 16px;
   bottom: 16px;
-
   display: grid;
   place-items: center;
-
   background: var(--orange);
   color: #151515;
-
   font-size: 22px;
 }
 
 .project-card figcaption {
   padding: 17px 0 19px;
-
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-
   border-bottom: 1px solid var(--line);
 }
 
-.project-card figcaption strong {
-  font-size: 15px;
-}
 
-.project-card figcaption small {
-  color: var(--orange);
-  font-size: 10px;
-}
-
-
-/* =========================================================
-   WHY
-   ========================================================= */
+/* WHY */
 
 .why {
   padding: 115px 0;
@@ -909,42 +728,16 @@ location-thessaloniki b {
   gap: 10%;
 }
 
-.why-list {
-  border-bottom: 1px solid var(--line);
-}
-
 .why-list article {
   padding: 28px 0;
-
   display: grid;
   grid-template-columns: 50px 1fr;
   gap: 20px;
-
   border-top: 1px solid var(--line);
 }
 
-.why-list article > span {
-  color: var(--orange);
-  font-size: 10px;
-  font-weight: 900;
-}
 
-.why-list h3 {
-  margin: 0 0 8px;
-  font-size: 24px;
-}
-
-.why-list p {
-  max-width: 560px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-
-/* =========================================================
-   CONTACT
-   ========================================================= */
+/* CONTACT */
 
 .contact {
   padding: 105px 0;
@@ -952,60 +745,24 @@ location-thessaloniki b {
   color: #161616;
 }
 
-.contact-kicker {
-  color: #161616;
-}
-
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
-  align-items: center;
-}
-
-.contact-links {
-  border-top: 1px solid rgba(20, 20, 20, 0.26);
 }
 
 .contact-links a {
   min-height: 100px;
   padding: 23px 55px 23px 0;
-
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  border-bottom: 1px solid rgba(20, 20, 20, 0.26);
-}
-
-.contact-links small {
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1.3px;
-}
-
-.contact-links strong {
-  margin-top: 5px;
-  font-size: clamp(22px, 2.2vw, 34px);
-  letter-spacing: -1px;
-}
-
-.contact-links a > span {
-  position: absolute;
-  right: 4px;
-  top: 50%;
-
-  transform: translateY(-50%);
-
-  font-size: 27px;
+  border-bottom: 1px solid rgba(20,20,20,0.26);
 }
 
 
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* FOOTER */
 
 .footer {
   padding: 80px 0 28px;
@@ -1023,67 +780,32 @@ location-thessaloniki b {
   mix-blend-mode: lighten;
 }
 
-.footer-brand p {
-  max-width: 260px;
-  margin-top: 24px;
-  color: #767d76;
-  font-size: 12px;
-}
-
 .footer-column {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.footer-column strong {
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-
-.footer-column a {
-  color: #838a83;
-  font-size: 12px;
-  transition: color 0.2s ease;
-}
-
-.footer-column a:hover {
-  color: var(--orange);
-}
-
 .footer-bottom {
   margin-top: 70px;
   padding-top: 25px;
-
   border-top: 1px solid #252925;
-
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-
   color: #6f766f;
   font-size: 10px;
 }
 
 
-/* =========================================================
-   LIGHTBOX
-   ========================================================= */
+/* LIGHTBOX */
 
 #lightbox {
   width: min(1100px, 94vw);
   max-height: 94vh;
-
   padding: 16px;
-
   border: 1px solid var(--line);
-
   background: #101210;
   color: white;
-}
-
-#lightbox::backdrop {
-  background: rgba(0, 0, 0, 0.92);
 }
 
 #lightbox img {
@@ -1095,30 +817,17 @@ location-thessaloniki b {
 .lightbox-close {
   width: 42px;
   height: 42px;
-
   margin: 0 0 14px auto;
-
   display: block;
-
   border: 1px solid var(--line);
-
   background: transparent;
   color: white;
-
-  cursor: pointer;
-  font-size: 23px;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* TABLET */
 
 @media (max-width: 1100px) {
-
-  .nav {
-    gap: 22px;
-  }
 
   .service-grid {
     grid-template-columns: 1fr 1fr;
@@ -1129,38 +838,20 @@ location-thessaloniki b {
     gap: 55px;
   }
 
-  .map-card {
-    max-width: 760px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* MOBILE */
 
 @media (max-width: 760px) {
-
-  html {
-    scroll-padding-top: 80px;
-  }
 
   .shell {
     width: 88%;
   }
 
-
-  /* TOPBAR */
-
   .topbar {
     display: none;
   }
-
-
-  /* HEADER */
 
   .header-inner {
     min-height: 82px;
@@ -1178,64 +869,15 @@ location-thessaloniki b {
   .nav {
     width: 100%;
     display: none;
-
     flex-direction: column;
-    align-items: stretch;
-
-    gap: 0;
-
-    padding-bottom: 16px;
   }
 
   .nav.open {
     display: flex;
   }
 
-  .nav > a {
-    padding: 14px 0;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .nav-button {
-    margin-top: 10px;
-    padding: 14px 16px !important;
-    border: 0 !important;
-  }
-
-
-  /* HERO */
-
-  .hero,
-  .hero-inner {
-    min-height: 760px;
-  }
-
-  .hero-background {
-    object-position: 61% center;
-  }
-
-  .hero-shade {
-    background:
-      linear-gradient(
-        to top,
-        rgba(7, 9, 7, 0.97) 0%,
-        rgba(7, 9, 7, 0.8) 58%,
-        rgba(7, 9, 7, 0.35) 100%
-      );
-  }
-
-  .hero-inner {
-    padding-top: 85px;
-    padding-bottom: 24px;
-  }
-
   .hero h1 {
-    font-size: clamp(49px, 14vw, 73px);
-    letter-spacing: -3.2px;
-  }
-
-  .hero-text {
-    font-size: 15px;
+    font-size: 50px;
   }
 
   .hero-buttons {
@@ -1254,177 +896,35 @@ location-thessaloniki b {
     grid-column: 1 / -1;
   }
 
-
-  /* GENERAL */
-
-  h2 {
-    font-size: 40px;
-    letter-spacing: -1.8px;
-  }
-
-  .section-heading {
-    display: block;
-  }
-
-  .section-heading > p {
-    margin-top: 25px;
-  }
-
-
-  /* INTRO */
-
-  .intro {
-    padding: 75px 0;
-  }
-
-  .two-columns {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-
-  /* SERVICES */
-
-  .services {
-    padding: 75px 0 85px;
-  }
-
-  .service-grid {
+  .two-columns,
+  .about-grid,
+  .why-grid,
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-card {
-    min-height: 340px;
-  }
-
-  .service-card h3 {
-    margin-top: 48px;
-  }
-
-
-  /* ABOUT */
-
-  .about {
-    padding: 80px 0;
-  }
-
-  .about-grid {
+  .service-grid,
+  .project-grid {
     grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .about-photo {
-    min-height: 460px;
-  }
-
-
-  /* PRESENCE */
-
-  .presence {
-    padding: 80px 0;
-  }
-
-  .presence-copy h2 {
-    font-size: 43px;
   }
 
   .metric-grid {
     grid-template-columns: 1fr;
   }
 
-  .map-card {
-    padding: 12px;
-  }
-
-  .map-header h3 {
-    font-size: 17px;
-  }
-
-  .map-header span {
-    font-size: 8px;
-  }
-
-  .location {
-    font-size: 8px;
-    gap: 4px;
-  }
-
-  .location i {
-    width: 10px;
-    height: 10px;
-    flex-basis: 10px;
-  }
-
-  .location b {
-    padding: 3px 4px;
-  }
-
-
-  /* PROJECTS */
-
-  .projects {
-    padding: 80px 0 90px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
+  .map-locations {
+    grid-template-columns: 1fr 1fr;
   }
 
   .gallery-link {
     height: 390px;
   }
 
-
-  /* WHY */
-
-  .why {
-    padding: 80px 0;
-  }
-
-  .why-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-
-  /* CONTACT */
-
-  .contact {
-    padding: 75px 0;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .contact-links strong {
-    font-size: 24px;
-  }
-
-
-  /* FOOTER */
-
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 45px 25px;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
   }
 
 }
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
 
 @media (max-width: 430px) {
 
@@ -1434,18 +934,6 @@ location-thessaloniki b {
 
   .hero-stats {
     grid-template-columns: 1fr;
-  }
-
-  .wide-stat {
-    grid-column: auto;
-  }
-
-  .about-photo {
-    min-height: 400px;
-  }
-
-  .gallery-link {
-    height: 335px;
   }
 
   .footer-grid {
