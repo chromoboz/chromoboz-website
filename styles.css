@@ -1629,3 +1629,18 @@ h2 {
   }
 
 }
+/* PARTNERS */
+
+.partners-strip {
+  padding: 28px 0 10px;
+  background: #0b0d0b;
+  border-top: 1px solid #252925;
+}
+
+.partners-image {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
