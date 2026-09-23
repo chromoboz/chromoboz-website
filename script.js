@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // =========================
-  // MOBILE MENU
-  // =========================
+  /* =========================
+     MOBILE MENU
+     ========================= */
 
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".navigation");
@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (toggle && nav) {
 
     toggle.addEventListener("click", () => {
-      const isOpen = nav.classList.toggle("open");
+      const open = nav.classList.toggle("open");
 
       toggle.setAttribute(
         "aria-expanded",
-        isOpen ? "true" : "false"
+        open ? "true" : "false"
       );
 
-      toggle.textContent = isOpen ? "✕" : "☰";
+      toggle.textContent = open ? "✕" : "☰";
     });
 
     nav.querySelectorAll("a").forEach((link) => {
@@ -35,13 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.textContent = "☰";
       }
     });
-
   }
 
 
-  // =========================
-  // CURRENT YEAR
-  // =========================
+  /* =========================
+     CURRENT YEAR
+     ========================= */
 
   const year = document.getElementById("year");
 
@@ -50,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  // =========================
-  // IMAGE LIGHTBOX
-  // =========================
+  /* =========================
+     IMAGE LIGHTBOX
+     ========================= */
 
   const dialog = document.getElementById("lightbox");
 
@@ -81,47 +80,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
         dialog.showModal();
         document.body.style.overflow = "hidden";
-
       });
 
     });
 
 
     if (closeButton) {
-
       closeButton.addEventListener("click", () => {
         dialog.close();
       });
-
     }
 
 
     dialog.addEventListener("click", (event) => {
-
       if (event.target === dialog) {
         dialog.close();
       }
-
     });
 
 
     dialog.addEventListener("close", () => {
-
       document.body.style.overflow = "";
 
       if (dialogImage) {
         dialogImage.src = "";
       }
-
     });
 
 
     document.addEventListener("keydown", (event) => {
-
       if (event.key === "Escape" && dialog.open) {
         dialog.close();
       }
-
     });
 
   }
