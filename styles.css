@@ -4,23 +4,20 @@
   --bg: #111311;
   --bg-2: #171a17;
   --panel: #1d211d;
-  --panel-2: #242824;
-
   --text: #f5f3ed;
   --muted: #a7ada7;
   --muted-2: #777d77;
-
   --orange: #f2762e;
   --orange-2: #ff8b47;
-
   --line: #343934;
   --line-light: #464c46;
-
   --max: 1500px;
 }
 
 
-/* RESET */
+/* =========================
+   RESET
+========================= */
 
 * {
   box-sizing: border-box;
@@ -65,7 +62,9 @@ button {
 }
 
 
-/* TOP BAR */
+/* =========================
+   TOP BAR
+========================= */
 
 .topbar {
   background: var(--orange);
@@ -83,12 +82,10 @@ button {
   gap: 30px;
 }
 
-.topbar-regions {
-  text-align: right;
-}
 
-
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .site-header {
   position: relative;
@@ -107,8 +104,8 @@ button {
 
 .brand {
   width: 205px;
-  line-height: 0;
   flex-shrink: 0;
+  line-height: 0;
 }
 
 .brand img {
@@ -138,7 +135,7 @@ button {
   width: 0;
   height: 1px;
   background: var(--orange);
-  transition: width 0.22s ease;
+  transition: width 0.2s ease;
 }
 
 .navigation > a:not(.nav-cta):hover::after {
@@ -150,16 +147,12 @@ button {
   background: var(--orange);
   color: #151515;
   display: inline-flex;
-  gap: 22px;
   align-items: center;
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+  gap: 22px;
 }
 
 .nav-cta:hover {
   background: var(--orange-2);
-  transform: translateY(-1px);
 }
 
 .menu-toggle {
@@ -173,7 +166,9 @@ button {
 }
 
 
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
 
 .eyebrow {
   margin: 0 0 22px;
@@ -199,7 +194,9 @@ h2 {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 760px;
@@ -225,14 +222,14 @@ h2 {
   background:
     linear-gradient(
       90deg,
-      rgba(9, 11, 9, 0.95) 0%,
+      rgba(9, 11, 9, 0.96) 0%,
       rgba(9, 11, 9, 0.84) 34%,
       rgba(9, 11, 9, 0.43) 62%,
       rgba(9, 11, 9, 0.18) 100%
     ),
     linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.66) 0%,
+      rgba(0, 0, 0, 0.66),
       transparent 44%
     );
 }
@@ -288,10 +285,7 @@ h2 {
   gap: 32px;
   font-size: 13px;
   font-weight: 800;
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease,
-    transform 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .button:hover {
@@ -308,9 +302,8 @@ h2 {
 }
 
 .button-ghost {
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(17, 19, 17, 0.25);
-  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(17,19,17,0.25);
 }
 
 .button-ghost:hover {
@@ -321,14 +314,13 @@ h2 {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
   gap: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255,255,255,0.12);
 }
 
 .hero-stat {
   min-height: 96px;
   padding: 18px 22px;
-  background: rgba(14, 16, 14, 0.86);
-  backdrop-filter: blur(7px);
+  background: rgba(14,16,14,0.88);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -350,11 +342,12 @@ h2 {
 .hero-stat-wide strong {
   color: var(--orange);
   font-size: 17px;
-  letter-spacing: 0.6px;
 }
 
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 .intro-section {
   padding: 105px 0;
@@ -366,15 +359,10 @@ h2 {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 12%;
-  align-items: start;
 }
 
 .intro-section .eyebrow {
   color: #d85f19;
-}
-
-.intro-section h2 {
-  max-width: 680px;
 }
 
 .intro-copy {
@@ -388,29 +376,32 @@ h2 {
 }
 
 
-/* SECTION HEADING */
+/* =========================
+   SECTION HEADINGS
+========================= */
 
 .section-heading {
   margin-bottom: 52px;
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 60px;
 }
 
 .section-heading > p {
   max-width: 360px;
-  margin: 0 0 7px;
+  margin-bottom: 7px;
   color: var(--muted);
   font-size: 14px;
 }
 
 
-/* SERVICES */
+/* =========================
+   SERVICES
+========================= */
 
 .services-section {
   padding: 110px 0 120px;
-  background: var(--bg);
 }
 
 .services-grid {
@@ -425,35 +416,34 @@ h2 {
   min-height: 410px;
   padding: 28px;
   background: var(--bg-2);
-  position: relative;
   display: flex;
   flex-direction: column;
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+  position: relative;
+  transition: 0.25s ease;
 }
 
 .service-card:hover {
+  background: #202420;
   transform: translateY(-6px);
-  background: #1f231f;
   z-index: 2;
 }
 
 .service-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.service-number,
+.service-icon {
+  color: var(--orange);
 }
 
 .service-number {
-  color: var(--orange);
   font-size: 10px;
   font-weight: 900;
 }
 
 .service-icon {
-  color: var(--orange);
   font-size: 24px;
 }
 
@@ -465,7 +455,6 @@ h2 {
 }
 
 .service-card p {
-  margin-bottom: 28px;
   color: var(--muted);
   font-size: 14px;
 }
@@ -479,7 +468,9 @@ h2 {
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-section {
   padding: 120px 0;
@@ -513,7 +504,7 @@ h2 {
   bottom: 24px;
   min-width: 230px;
   padding: 18px 20px;
-  background: rgba(17, 19, 17, 0.91);
+  background: rgba(17,19,17,0.92);
   border-left: 3px solid var(--orange);
 }
 
@@ -528,10 +519,6 @@ h2 {
   display: block;
   margin-top: 5px;
   font-size: 20px;
-}
-
-.about-content h2 {
-  max-width: 680px;
 }
 
 .about-lead {
@@ -562,28 +549,26 @@ h2 {
 }
 
 
-/* PRESENCE / 40+ / MAP */
+/* =========================
+   PRESENCE
+========================= */
 
 .presence-section {
   padding: 110px 0;
-  background: linear-gradient(180deg, #101210 0%, #151815 100%);
+  background: linear-gradient(180deg, #101210, #151815);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
 .presence-grid {
   display: grid;
-  grid-template-columns: 1fr 0.95fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 5%;
-  align-items: stretch;
-}
-
-.presence-content {
-  padding: 30px 0;
+  align-items: center;
 }
 
 .presence-content h2 {
-  max-width: 790px;
+  max-width: 780px;
   font-size: clamp(46px, 5vw, 78px);
 }
 
@@ -593,7 +578,7 @@ h2 {
 }
 
 .presence-intro {
-  max-width: 700px;
+  max-width: 680px;
   margin: 28px 0 30px;
   color: #b8bdb8;
   font-size: 16px;
@@ -620,12 +605,11 @@ h2 {
 .metric-number {
   color: var(--orange);
   font-size: 38px;
-  line-height: 1;
   font-weight: 800;
+  line-height: 1;
 }
 
 .metric-label {
-  margin-top: 18px;
   color: #d1d4d0;
   font-size: 13px;
 }
@@ -642,7 +626,6 @@ h2 {
 .presence-item strong {
   display: block;
   margin-bottom: 8px;
-  color: #f5f3ed;
   font-size: 14px;
 }
 
@@ -650,26 +633,25 @@ h2 {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.7;
 }
 
 
-/* MAP CARD */
+/* =========================
+   MAP
+========================= */
 
 .presence-map-card {
-  padding: 24px;
-  background: #171a17;
+  padding: 22px;
+  background: #151815;
   border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
 }
 
 .map-title-row {
+  margin-bottom: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  margin-bottom: 18px;
 }
 
 .map-title-row h3 {
@@ -681,85 +663,115 @@ h2 {
   color: var(--orange);
   font-size: 9px;
   font-weight: 900;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.3px;
 }
 
+
+/*
+  Harita görseli 4:5.
+  Bu alanı da aynı oranda tutuyoruz.
+  Böylece noktalar ekranda kaymıyor.
+*/
+
 .real-greece-map {
-  flex: 1;
-  min-height: 560px;
+  width: 100%;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 50% 25%,
-      rgba(242, 118, 46, 0.08),
-      transparent 42%
-    ),
-    #111311;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #0e100f;
 }
 
 .greece-map-image {
-  width: 82%;
-  max-height: 520px;
-  object-fit: contain;
-  opacity: 0.63;
-  filter:
-    grayscale(1)
-    brightness(0.7)
-    contrast(1.1)
-    sepia(0.08);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
-/* ACTIVE LOCATIONS */
+/* =========================
+   MAP LOCATIONS
+========================= */
 
 .map-location {
   position: absolute;
+  z-index: 5;
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #f5f3ed;
-  font-size: 12px;
+  gap: 7px;
+  color: white;
+  font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
-  z-index: 3;
 }
 
-.map-location span {
+.map-dot {
   width: 14px;
   height: 14px;
   flex: 0 0 14px;
   border-radius: 50%;
   background: var(--orange);
-  border: 2px solid #fff;
+  border: 2px solid white;
+
   box-shadow:
-    0 0 0 5px rgba(242, 118, 46, 0.15),
-    0 0 18px rgba(242, 118, 46, 0.32);
+    0 0 0 5px rgba(242,118,46,0.14),
+    0 0 14px rgba(242,118,46,0.7);
 }
 
+.map-location strong {
+  padding: 5px 7px;
+  background: rgba(9,11,9,0.82);
+  border-radius: 3px;
+}
+
+
+/*
+   Noktalar doğrudan greece-map.png
+   görseline göre ayarlandı.
+*/
+
 .thessaloniki {
-  top: 24%;
-  left: 43%;
+  top: 18%;
+  left: 47%;
 }
 
 .chalkidiki {
-  top: 31%;
-  left: 48%;
+  top: 25%;
+  left: 53%;
 }
 
 .kavala {
-  top: 24%;
-  left: 57%;
+  top: 16%;
+  left: 61%;
 }
 
 .alexandroupoli {
-  top: 29%;
-  left: 69%;
+  top: 17%;
+  left: 72%;
 }
+
+
+/*
+  Etiketleri birbirinden ayırıyoruz.
+*/
+
+.thessaloniki strong {
+  transform: translate(-65%, -120%);
+}
+
+.chalkidiki strong {
+  transform: translate(-5%, 115%);
+}
+
+.kavala strong {
+  transform: translate(-10%, -120%);
+}
+
+.alexandroupoli strong {
+  transform: translate(0, 80%);
+}
+
 
 .map-legend {
   margin-top: 16px;
@@ -782,11 +794,12 @@ h2 {
 }
 
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects-section {
   padding: 115px 0 125px;
-  background: var(--bg);
 }
 
 .projects-grid {
@@ -822,22 +835,6 @@ h2 {
   transform: scale(1.035);
 }
 
-.project:nth-child(1) img {
-  object-position: center;
-}
-
-.project:nth-child(2) img {
-  object-position: center 62%;
-}
-
-.project:nth-child(3) img {
-  object-position: center;
-}
-
-.project:nth-child(4) img {
-  object-position: center 45%;
-}
-
 .project-arrow {
   width: 46px;
   height: 46px;
@@ -855,7 +852,6 @@ h2 {
   padding: 17px 0 19px;
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -874,11 +870,12 @@ h2 {
 
 .project figcaption small {
   color: var(--orange);
-  font-size: 10px;
 }
 
 
-/* WHY */
+/* =========================
+   WHY
+========================= */
 
 .why-section {
   padding: 115px 0;
@@ -915,14 +912,15 @@ h2 {
 }
 
 .why-list p {
-  max-width: 560px;
   margin: 0;
   color: var(--muted);
   font-size: 14px;
 }
 
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta-section {
   padding: 105px 0;
@@ -941,34 +939,28 @@ h2 {
   align-items: center;
 }
 
-.cta-section h2 {
-  font-size: clamp(44px, 5vw, 78px);
-}
-
 .cta-links {
-  border-top: 1px solid rgba(20, 20, 20, 0.25);
+  border-top: 1px solid rgba(20,20,20,0.25);
 }
 
 .cta-links a {
-  position: relative;
   min-height: 100px;
   padding: 23px 55px 23px 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid rgba(20, 20, 20, 0.25);
+  border-bottom: 1px solid rgba(20,20,20,0.25);
 }
 
 .cta-links small {
   font-size: 9px;
   font-weight: 900;
-  letter-spacing: 1.3px;
 }
 
 .cta-links strong {
   margin-top: 5px;
   font-size: clamp(22px, 2.2vw, 34px);
-  letter-spacing: -1px;
 }
 
 .cta-links > a > span {
@@ -980,7 +972,9 @@ h2 {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .site-footer {
   padding: 80px 0 28px;
@@ -1013,7 +1007,6 @@ h2 {
 
 .footer-column strong {
   margin-bottom: 10px;
-  color: white;
   font-size: 12px;
 }
 
@@ -1021,7 +1014,6 @@ h2 {
 .footer-column span {
   color: #838983;
   font-size: 12px;
-  transition: color 0.2s ease;
 }
 
 .footer-column a:hover {
@@ -1034,13 +1026,14 @@ h2 {
   border-top: 1px solid #252825;
   display: flex;
   justify-content: space-between;
-  gap: 30px;
   color: #6f756f;
   font-size: 10px;
 }
 
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 #lightbox {
   width: min(1100px, 94vw);
@@ -1052,7 +1045,7 @@ h2 {
 }
 
 #lightbox::backdrop {
-  background: rgba(0, 0, 0, 0.92);
+  background: rgba(0,0,0,0.92);
 }
 
 #lightbox img {
@@ -1062,19 +1055,21 @@ h2 {
 }
 
 .lightbox-close {
-  display: block;
   width: 42px;
   height: 42px;
   margin: 0 0 14px auto;
+  display: block;
   border: 1px solid var(--line-light);
   background: transparent;
   color: white;
-  cursor: pointer;
   font-size: 23px;
+  cursor: pointer;
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1100px) {
 
@@ -1086,16 +1081,8 @@ h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-grid {
-    gap: 5%;
-  }
-
   .presence-grid {
     grid-template-columns: 1fr;
-  }
-
-  .presence-map-card {
-    min-height: 660px;
   }
 
   .projects-grid {
@@ -1105,13 +1092,11 @@ h2 {
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 760px) {
-
-  html {
-    scroll-padding-top: 85px;
-  }
 
   .container {
     width: 88%;
@@ -1155,7 +1140,6 @@ h2 {
   .nav-cta {
     margin-top: 10px;
     padding: 14px 16px !important;
-    border: 0 !important;
   }
 
 
@@ -1166,32 +1150,13 @@ h2 {
     min-height: 760px;
   }
 
-  .hero-image img {
-    object-position: 61% center;
-  }
-
-  .hero-overlay {
-    background:
-      linear-gradient(
-        to top,
-        rgba(8, 10, 8, 0.96) 0%,
-        rgba(8, 10, 8, 0.76) 55%,
-        rgba(8, 10, 8, 0.36) 100%
-      );
-  }
-
   .hero-content {
     padding-top: 85px;
-    padding-bottom: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(50px, 14vw, 75px);
-    letter-spacing: -3.5px;
-  }
-
-  .hero-description {
-    font-size: 15px;
+    font-size: 52px;
+    letter-spacing: -3px;
   }
 
   .hero-actions {
@@ -1220,7 +1185,6 @@ h2 {
 
   .section-heading {
     display: block;
-    margin-bottom: 36px;
   }
 
   .section-heading > p {
@@ -1230,10 +1194,6 @@ h2 {
 
   /* INTRO */
 
-  .intro-section {
-    padding: 75px 0;
-  }
-
   .intro-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1242,28 +1202,12 @@ h2 {
 
   /* SERVICES */
 
-  .services-section {
-    padding: 75px 0 85px;
-  }
-
   .services-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-card {
-    min-height: 340px;
-  }
-
-  .service-card h3 {
-    margin-top: 48px;
-  }
-
 
   /* ABOUT */
-
-  .about-section {
-    padding: 80px 0;
-  }
 
   .about-grid {
     grid-template-columns: 1fr;
@@ -1281,10 +1225,6 @@ h2 {
     padding: 80px 0;
   }
 
-  .presence-content {
-    padding: 0;
-  }
-
   .presence-content h2 {
     font-size: 43px;
   }
@@ -1294,59 +1234,33 @@ h2 {
   }
 
   .presence-map-card {
-    min-height: auto;
-    padding: 16px;
+    padding: 12px;
   }
 
-  .real-greece-map {
-    min-height: 470px;
-  }
-
-  .greece-map-image {
-    width: 92%;
+  .map-title-row h3 {
+    font-size: 17px;
   }
 
   .map-location {
-    font-size: 9px;
-    gap: 5px;
+    font-size: 8px;
+    gap: 4px;
   }
 
-  .map-location span {
-    width: 11px;
-    height: 11px;
-    flex-basis: 11px;
+  .map-dot {
+    width: 10px;
+    height: 10px;
+    flex-basis: 10px;
   }
 
-  .thessaloniki {
-    top: 25%;
-    left: 39%;
-  }
-
-  .chalkidiki {
-    top: 32%;
-    left: 44%;
-  }
-
-  .kavala {
-    top: 25%;
-    left: 55%;
-  }
-
-  .alexandroupoli {
-    top: 30%;
-    left: 65%;
+  .map-location strong {
+    padding: 3px 4px;
   }
 
 
   /* PROJECTS */
 
-  .projects-section {
-    padding: 80px 0 90px;
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
   }
 
   .gallery-link,
@@ -1357,10 +1271,6 @@ h2 {
 
   /* WHY */
 
-  .why-section {
-    padding: 80px 0;
-  }
-
   .why-grid {
     grid-template-columns: 1fr;
     gap: 45px;
@@ -1369,54 +1279,33 @@ h2 {
 
   /* CTA */
 
-  .cta-section {
-    padding: 75px 0;
-  }
-
   .cta-grid {
     grid-template-columns: 1fr;
     gap: 45px;
   }
 
-  .cta-section h2 {
-    font-size: 46px;
-  }
-
-  .cta-links strong {
-    font-size: 24px;
-  }
-
 
   /* FOOTER */
 
-  .site-footer {
-    padding-top: 60px;
-  }
-
   .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 45px 25px;
   }
 
   .footer-brand {
     grid-column: 1 / -1;
   }
 
-  .footer-bottom {
-    margin-top: 50px;
-    flex-direction: column;
-    gap: 10px;
-  }
-
 }
 
 
-/* SMALL MOBILE */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 430px) {
 
   .hero h1 {
-    font-size: 49px;
+    font-size: 47px;
   }
 
   .hero-bottom {
@@ -1425,14 +1314,6 @@ h2 {
 
   .hero-stat-wide {
     grid-column: auto;
-  }
-
-  .about-image {
-    min-height: 410px;
-  }
-
-  .real-greece-map {
-    min-height: 420px;
   }
 
   .gallery-link,
