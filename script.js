@@ -1,18 +1,129 @@
-document.documentElement.classList.add('js');
-const toggle=document.querySelector('.menu-toggle');
-const nav=document.querySelector('nav');
-toggle.hidden=false;
-function closeMenu(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
-toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
-nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',closeMenu));
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){closeMenu();toggle.focus();}});
-document.getElementById('year').textContent=new Date().getFullYear();
-const dialog=document.getElementById('lightbox');
-document.querySelectorAll('.gallery-link').forEach(link=>link.addEventListener('click',event=>{
- if(typeof dialog.showModal!=='function')return;
- event.preventDefault();const img=dialog.querySelector('img');img.src=link.href;img.alt=link.querySelector('img').alt;
- dialog.querySelector('p').textContent=link.dataset.caption;dialog.showModal();document.body.classList.add('modal-open');
-}));
-dialog.querySelector('.close').addEventListener('click',()=>dialog.close());
-dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
-dialog.addEventListener('close',()=>document.body.classList.remove('modal-open'));
+document.addEventListener("DOMContentLoaded", () => {
+
+  // =========================
+  // MOBILE MENU
+  // =========================
+
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".navigation");
+
+  if (toggle && nav) {
+
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+
+      toggle.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      toggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "☰";
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.textContent = "☰";
+      }
+    });
+
+  }
+
+
+  // =========================
+  // CURRENT YEAR
+  // =========================
+
+  const year = document.getElementById("year");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+
+  // =========================
+  // IMAGE LIGHTBOX
+  // =========================
+
+  const dialog = document.getElementById("lightbox");
+
+  if (dialog) {
+
+    const dialogImage = dialog.querySelector("img");
+    const closeButton = dialog.querySelector(".lightbox-close");
+    const galleryLinks = document.querySelectorAll(".gallery-link");
+
+    galleryLinks.forEach((link) => {
+
+      link.addEventListener("click", (event) => {
+
+        if (typeof dialog.showModal !== "function") {
+          return;
+        }
+
+        event.preventDefault();
+
+        const thumbnail = link.querySelector("img");
+
+        if (dialogImage && thumbnail) {
+          dialogImage.src = link.getAttribute("href");
+          dialogImage.alt = thumbnail.alt || "CHROMO BOZ";
+        }
+
+        dialog.showModal();
+        document.body.style.overflow = "hidden";
+
+      });
+
+    });
+
+
+    if (closeButton) {
+
+      closeButton.addEventListener("click", () => {
+        dialog.close();
+      });
+
+    }
+
+
+    dialog.addEventListener("click", (event) => {
+
+      if (event.target === dialog) {
+        dialog.close();
+      }
+
+    });
+
+
+    dialog.addEventListener("close", () => {
+
+      document.body.style.overflow = "";
+
+      if (dialogImage) {
+        dialogImage.src = "";
+      }
+
+    });
+
+
+    document.addEventListener("keydown", (event) => {
+
+      if (event.key === "Escape" && dialog.open) {
+        dialog.close();
+      }
+
+    });
+
+  }
+
+});
