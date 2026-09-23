@@ -1,18 +1,34 @@
 @charset "UTF-8";
 
+/* =========================================================
+   CHROMO BOZ
+   CLEAN FINAL STYLES
+========================================================= */
+
 :root {
   --bg: #101210;
   --bg-soft: #151815;
   --panel: #1b1f1b;
+  --panel-soft: #202420;
+
   --text: #f5f3ed;
-  --muted: #a7ada7;
+  --muted: #a6ada6;
+  --muted-dark: #777e77;
+
   --orange: #f2762e;
   --orange-light: #ff8b47;
-  --line: #333933;
+
+  --line: #343934;
   --paper: #f1efe8;
-  --paper-text: #1b1d1b;
-  --max-width: 1500px;
+  --paper-text: #1a1d1a;
+
+  --max: 1500px;
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
   box-sizing: border-box;
@@ -46,10 +62,27 @@ button {
   font: inherit;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
 .shell {
-  width: min(90%, var(--max-width));
+  width: min(90%, var(--max));
   margin: 0 auto;
 }
+
+::selection {
+  background: var(--orange);
+  color: #111;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
 
 .kicker {
   margin: 0 0 22px;
@@ -59,11 +92,8 @@ button {
   letter-spacing: 1.8px;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
+.dark-kicker {
+  color: #cf5e1d;
 }
 
 h2 {
@@ -74,12 +104,33 @@ h2 {
   font-weight: 800;
 }
 
+.section-dark {
+  background: var(--bg);
+}
 
-/* TOP BAR */
+.section-heading {
+  margin-bottom: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 60px;
+}
+
+.section-heading > p {
+  max-width: 360px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
 
 .topbar {
   background: var(--orange);
-  color: #151515;
+  color: #141414;
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 1.1px;
@@ -94,7 +145,9 @@ h2 {
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
 
 .header {
   position: relative;
@@ -132,10 +185,33 @@ h2 {
   font-weight: 700;
 }
 
+.nav > a:not(.nav-button) {
+  position: relative;
+}
+
+.nav > a:not(.nav-button)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 1px;
+  background: var(--orange);
+  transition: width 0.2s ease;
+}
+
+.nav > a:not(.nav-button):hover::after {
+  width: 100%;
+}
+
 .nav-button {
   padding: 13px 17px;
   background: var(--orange);
   color: #151515;
+}
+
+.nav-button:hover {
+  background: var(--orange-light);
 }
 
 .menu-button {
@@ -145,10 +221,13 @@ h2 {
   border: 1px solid var(--line);
   background: transparent;
   color: white;
+  cursor: pointer;
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
   min-height: 760px;
@@ -175,8 +254,8 @@ h2 {
       90deg,
       rgba(5, 7, 5, 0.96) 0%,
       rgba(5, 7, 5, 0.84) 35%,
-      rgba(5, 7, 5, 0.46) 63%,
-      rgba(5, 7, 5, 0.16) 100%
+      rgba(5, 7, 5, 0.45) 63%,
+      rgba(5, 7, 5, 0.15) 100%
     ),
     linear-gradient(
       to top,
@@ -191,6 +270,7 @@ h2 {
   min-height: 760px;
   padding-top: 110px;
   padding-bottom: 35px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -235,6 +315,11 @@ h2 {
   justify-content: center;
   font-size: 13px;
   font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
 }
 
 .primary {
@@ -242,9 +327,17 @@ h2 {
   color: #151515;
 }
 
+.primary:hover {
+  background: var(--orange-light);
+}
+
 .secondary {
   border: 1px solid rgba(255,255,255,0.28);
   background: rgba(15,17,15,0.38);
+}
+
+.secondary:hover {
+  border-color: var(--orange);
 }
 
 .hero-stats {
@@ -258,6 +351,7 @@ h2 {
   min-height: 98px;
   padding: 18px 22px;
   background: rgba(13,15,13,0.9);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,11 +359,12 @@ h2 {
 
 .hero-stats strong {
   font-size: 28px;
+  line-height: 1;
 }
 
 .hero-stats span {
   margin-top: 9px;
-  color: #a6ada6;
+  color: var(--muted);
   font-size: 9px;
   letter-spacing: 1.2px;
 }
@@ -280,7 +375,9 @@ h2 {
 }
 
 
-/* INTRO */
+/* =========================================================
+   INTRO
+========================================================= */
 
 .intro {
   padding: 105px 0;
@@ -300,29 +397,14 @@ h2 {
 }
 
 .intro-copy p {
+  margin-bottom: 22px;
   color: #505650;
 }
 
 
-/* SECTION HEADING */
-
-.section-heading {
-  margin-bottom: 52px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 60px;
-}
-
-.section-heading > p {
-  max-width: 360px;
-  margin-bottom: 6px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-
-/* SERVICES */
+/* =========================================================
+   SERVICES
+========================================================= */
 
 .services {
   padding: 110px 0 120px;
@@ -340,12 +422,18 @@ h2 {
   min-height: 420px;
   padding: 28px;
   background: var(--bg-soft);
+
   display: flex;
   flex-direction: column;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .service-card:hover {
-  background: #1e231e;
+  background: var(--panel-soft);
+  transform: translateY(-5px);
 }
 
 .service-meta {
@@ -356,27 +444,35 @@ h2 {
   font-weight: 900;
 }
 
+.service-meta span:last-child {
+  font-size: 23px;
+}
+
 .service-card h3 {
   margin: 68px 0 20px;
   font-size: 30px;
   line-height: 1.06;
+  letter-spacing: -1.2px;
 }
 
 .service-card p {
+  margin-bottom: 28px;
   color: var(--muted);
   font-size: 14px;
 }
 
 .service-card small {
   margin-top: auto;
-  color: #747a74;
+  color: var(--muted-dark);
   font-size: 9px;
   font-weight: 800;
   letter-spacing: 1.2px;
 }
 
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about {
   padding: 120px 0;
@@ -410,8 +506,22 @@ h2 {
   bottom: 24px;
   min-width: 230px;
   padding: 18px 20px;
+
   background: rgba(15,17,15,0.93);
   border-left: 3px solid var(--orange);
+}
+
+.photo-badge small {
+  display: block;
+  color: #858c85;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+.photo-badge strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 20px;
 }
 
 .about-copy .lead {
@@ -422,24 +532,27 @@ h2 {
 }
 
 .about-copy > p:not(.kicker):not(.lead) {
+  max-width: 560px;
   color: var(--muted);
 }
 
 .inline-link {
+  display: inline-block;
   margin-top: 18px;
   padding-bottom: 6px;
-  display: inline-block;
   border-bottom: 1px solid var(--orange);
   font-size: 13px;
   font-weight: 800;
 }
 
 
-/* PRESENCE */
+/* =========================================================
+   PRESENCE
+========================================================= */
 
 .presence {
   padding: 110px 0;
-  background: linear-gradient(180deg, #0e100e 0%, #151815 100%);
+  background: linear-gradient(180deg, #0e100e, #151815);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -479,6 +592,7 @@ h2 {
   padding: 22px;
   background: #171a17;
   border: 1px solid var(--line);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -487,6 +601,7 @@ h2 {
 .metric strong {
   color: var(--orange);
   font-size: 39px;
+  line-height: 1;
 }
 
 .metric span {
@@ -500,6 +615,12 @@ h2 {
   border-bottom: 1px solid var(--line);
 }
 
+.presence-detail strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
 .presence-detail p {
   margin: 0;
   color: var(--muted);
@@ -507,7 +628,9 @@ h2 {
 }
 
 
-/* MAP */
+/* =========================================================
+   MAP CARD
+========================================================= */
 
 .map-card {
   padding: 22px;
@@ -518,9 +641,11 @@ h2 {
 .map-header {
   min-height: 42px;
   margin-bottom: 18px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 25px;
 }
 
 .map-header h3 {
@@ -535,7 +660,11 @@ h2 {
   letter-spacing: 1.3px;
 }
 
-.map-stage {
+
+/* HARİTA */
+
+.map-stage,
+.clean-map {
   width: 100%;
   aspect-ratio: 4 / 5;
   position: relative;
@@ -546,126 +675,185 @@ h2 {
 .map-image {
   position: absolute;
   inset: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: contain;
   object-position: center;
+
   pointer-events: none;
   user-select: none;
 }
 
 
-/* MAP PINS */
+/* =========================================================
+   MAP PINS
+   TEK TANIM BURADA
+========================================================= */
 
 .map-pin {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+
   position: absolute;
-  z-index: 5;
+  z-index: 20;
+
   padding: 0;
+  margin: 0;
+
   border: 0;
   border-radius: 50%;
+
   background: transparent;
+
   cursor: pointer;
 }
 
-.map-pin span {
-  width: 12px;
-  height: 12px;
+.map-pin > span {
   position: absolute;
   left: 3px;
   top: 3px;
+
+  width: 14px;
+  height: 14px;
+
   border-radius: 50%;
+
   background: var(--orange);
-  border: 2px solid white;
+  border: 2px solid #fff;
+
   box-shadow:
-    0 0 0 5px rgba(242,118,46,0.13),
-    0 0 14px rgba(242,118,46,0.6);
+    0 0 0 5px rgba(242,118,46,0.14),
+    0 0 18px rgba(242,118,46,0.7);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.map-pin b {
+.map-pin:hover > span,
+.map-pin:focus-visible > span {
+  transform: scale(1.25);
+
+  box-shadow:
+    0 0 0 7px rgba(242,118,46,0.15),
+    0 0 22px rgba(242,118,46,0.9);
+}
+
+
+/* TOOLTIP */
+
+.map-pin > b {
   position: absolute;
+
   left: 50%;
-  bottom: calc(100% + 12px);
+  bottom: 30px;
+
   transform: translateX(-50%) translateY(4px);
-  padding: 6px 8px;
-  background: rgba(7,9,7,0.94);
-  color: white;
+
+  padding: 6px 9px;
+
+  background: rgba(6,8,6,0.96);
+  color: #fff;
+
   border-radius: 3px;
+
   font-size: 10px;
   font-weight: 800;
+
   white-space: nowrap;
+
   opacity: 0;
   pointer-events: none;
-  transition: 0.18s ease;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
 }
 
-.map-pin:hover b,
-.map-pin:focus-visible b {
+.map-pin:hover > b,
+.map-pin:focus-visible > b {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
 
 
-/* APPROXIMATE LOCATIONS */
+/* =========================================================
+   4 NOKTA
+   BAŞKA YERDE TANIM YOK
+========================================================= */
 
 .pin-thessaloniki {
-  top: 27%;
-  left: 48%;
+  top: 20.5%;
+  left: 45.5%;
 }
 
 .pin-chalkidiki {
-  top: 34%;
-  left: 47.5%;
+  top: 25.7%;
+  left: 48.5%;
 }
 
 .pin-kavala {
-  top: 27.5%;
+  top: 19.4%;
   left: 58.5%;
 }
 
 .pin-alexandroupoli {
-  top: 28.5%;
-  left: 70%;
+  top: 18.7%;
+  left: 69%;
 }
 
 
-/* CITY LIST */
+/* =========================================================
+   MAP CITY LIST
+========================================================= */
 
 .map-locations {
   margin-top: 18px;
+
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 
-.map-locations span {
+.map-locations > span {
   min-height: 58px;
-  padding: 0 14px;
+  padding: 0 10px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  color: #c6cbc6;
+
+  color: #c5cbc5;
+
   font-size: 11px;
   font-weight: 700;
+
   border-right: 1px solid var(--line);
 }
 
-.map-locations span:last-child {
+.map-locations > span:last-child {
   border-right: 0;
 }
 
-.map-locations i {
+.map-locations > span > i {
   width: 8px;
   height: 8px;
+
+  flex: 0 0 8px;
+
   border-radius: 50%;
   background: var(--orange);
 }
 
 
-/* PROJECTS */
+/* =========================================================
+   PROJECTS
+========================================================= */
 
 .projects {
   padding: 115px 0 125px;
@@ -686,36 +874,60 @@ h2 {
   position: relative;
   display: block;
   overflow: hidden;
+  background: var(--panel-soft);
 }
 
 .gallery-link img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-link:hover img {
+  transform: scale(1.035);
 }
 
 .gallery-link > span {
   width: 46px;
   height: 46px;
+
   position: absolute;
   right: 16px;
   bottom: 16px;
+
   display: grid;
   place-items: center;
+
   background: var(--orange);
   color: #151515;
+
   font-size: 22px;
 }
 
 .project-card figcaption {
   padding: 17px 0 19px;
+
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+
   border-bottom: 1px solid var(--line);
 }
 
+.project-card figcaption strong {
+  font-size: 15px;
+}
 
-/* WHY */
+.project-card figcaption small {
+  color: var(--orange);
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
 
 .why {
   padding: 115px 0;
@@ -728,16 +940,41 @@ h2 {
   gap: 10%;
 }
 
+.why-list {
+  border-bottom: 1px solid var(--line);
+}
+
 .why-list article {
   padding: 28px 0;
+
   display: grid;
   grid-template-columns: 50px 1fr;
   gap: 20px;
+
   border-top: 1px solid var(--line);
 }
 
+.why-list article > span {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 900;
+}
 
-/* CONTACT */
+.why-list h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.why-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
 
 .contact {
   padding: 105px 0;
@@ -745,24 +982,58 @@ h2 {
   color: #161616;
 }
 
+.contact-kicker {
+  color: #161616;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10%;
+  align-items: center;
+}
+
+.contact-links {
+  border-top: 1px solid rgba(20,20,20,0.26);
 }
 
 .contact-links a {
   min-height: 100px;
   padding: 23px 55px 23px 0;
+
   position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   border-bottom: 1px solid rgba(20,20,20,0.26);
 }
 
+.contact-links small {
+  font-size: 9px;
+  font-weight: 900;
+}
 
-/* FOOTER */
+.contact-links strong {
+  margin-top: 5px;
+  font-size: clamp(22px, 2.2vw, 34px);
+}
+
+.contact-links a > span {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 27px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer {
   padding: 80px 0 28px;
@@ -780,32 +1051,66 @@ h2 {
   mix-blend-mode: lighten;
 }
 
+.footer-brand p {
+  max-width: 260px;
+  margin-top: 24px;
+  color: #767d76;
+  font-size: 12px;
+}
+
 .footer-column {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
+.footer-column strong {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.footer-column a {
+  color: #838a83;
+  font-size: 12px;
+}
+
+.footer-column a:hover {
+  color: var(--orange);
+}
+
 .footer-bottom {
   margin-top: 70px;
   padding-top: 25px;
+
   border-top: 1px solid #252925;
+
   display: flex;
   justify-content: space-between;
+  gap: 30px;
+
   color: #6f766f;
   font-size: 10px;
 }
 
 
-/* LIGHTBOX */
+/* =========================================================
+   LIGHTBOX
+========================================================= */
 
 #lightbox {
   width: min(1100px, 94vw);
   max-height: 94vh;
+
   padding: 16px;
+
   border: 1px solid var(--line);
+
   background: #101210;
   color: white;
+}
+
+#lightbox::backdrop {
+  background: rgba(0,0,0,0.92);
 }
 
 #lightbox img {
@@ -817,17 +1122,29 @@ h2 {
 .lightbox-close {
   width: 42px;
   height: 42px;
+
   margin: 0 0 14px auto;
+
   display: block;
+
   border: 1px solid var(--line);
+
   background: transparent;
   color: white;
+
+  cursor: pointer;
 }
 
 
-/* TABLET */
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1100px) {
+
+  .nav {
+    gap: 20px;
+  }
 
   .service-grid {
     grid-template-columns: 1fr 1fr;
@@ -838,10 +1155,18 @@ h2 {
     gap: 55px;
   }
 
+  .map-card {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
 }
 
 
-/* MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 760px) {
 
@@ -869,15 +1194,44 @@ h2 {
   .nav {
     width: 100%;
     display: none;
+
     flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding-bottom: 16px;
   }
 
   .nav.open {
     display: flex;
   }
 
+  .nav > a {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .nav-button {
+    margin-top: 10px;
+    padding: 14px 16px;
+  }
+
+
+  /* HERO */
+
+  .hero,
+  .hero-inner {
+    min-height: 760px;
+  }
+
+  .hero-inner {
+    padding-top: 85px;
+  }
+
   .hero h1 {
     font-size: 50px;
+    letter-spacing: -3px;
   }
 
   .hero-buttons {
@@ -896,35 +1250,141 @@ h2 {
     grid-column: 1 / -1;
   }
 
-  .two-columns,
-  .about-grid,
-  .why-grid,
-  .contact-grid {
+
+  /* GENERAL */
+
+  h2 {
+    font-size: 40px;
+    letter-spacing: -1.8px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 25px;
+  }
+
+
+  /* INTRO */
+
+  .two-columns {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+
+  /* SERVICES */
+
+  .service-grid {
     grid-template-columns: 1fr;
   }
 
-  .service-grid,
-  .project-grid {
+
+  /* ABOUT */
+
+  .about-grid {
     grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-photo {
+    min-height: 460px;
+  }
+
+
+  /* PRESENCE */
+
+  .presence-copy h2 {
+    font-size: 43px;
   }
 
   .metric-grid {
     grid-template-columns: 1fr;
   }
 
+  .map-card {
+    padding: 12px;
+  }
+
+  .map-header h3 {
+    font-size: 17px;
+  }
+
+  .map-header span {
+    font-size: 8px;
+  }
+
+  .map-pin {
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-pin > span {
+    width: 10px;
+    height: 10px;
+    left: 3px;
+    top: 3px;
+  }
+
   .map-locations {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .map-locations > span {
+    min-height: 50px;
+  }
+
+
+  /* PROJECTS */
+
+  .project-grid {
+    grid-template-columns: 1fr;
   }
 
   .gallery-link {
     height: 390px;
   }
 
+
+  /* WHY */
+
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+
+  /* FOOTER */
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 430px) {
 
@@ -936,340 +1396,16 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .wide-stat {
+    grid-column: auto;
+  }
+
+  .gallery-link {
+    height: 335px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
 
-}
-/* =========================================
-   MAP FIX — CURRENT HTML
-========================================= */
-
-.location {
-  position: absolute;
-  z-index: 10;
-
-  width: 18px;
-  height: 18px;
-
-  display: block;
-
-  font-size: 0;
-}
-
-/* Turuncu nokta */
-
-.location i {
-  position: absolute;
-  inset: 3px;
-
-  width: 12px;
-  height: 12px;
-
-  border-radius: 50%;
-
-  background: #f2762e;
-  border: 2px solid #ffffff;
-
-  box-shadow:
-    0 0 0 5px rgba(242, 118, 46, 0.15),
-    0 0 16px rgba(242, 118, 46, 0.65);
-}
-
-/* Şehir adı normalde görünmesin */
-
-.location b {
-  position: absolute;
-
-  left: 50%;
-  bottom: 28px;
-
-  transform: translateX(-50%) translateY(5px);
-
-  padding: 6px 9px;
-
-  background: rgba(8, 10, 8, 0.96);
-
-  color: #ffffff;
-
-  border-radius: 3px;
-
-  font-size: 10px;
-  font-weight: 800;
-
-  white-space: nowrap;
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-}
-
-/* Mouse gelince şehir adı çıksın */
-
-.location:hover b {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-
-/* =========================================
-   LOCATIONS
-========================================= */
-
-.location-thessaloniki {
-  top: 18%;
-  left: 48%;
-}
-
-.location-chalkidiki {
-  top: 23%;
-  left: 50%;
-}
-
-.location-kavala {
-  top: 16.5%;
-  left: 57%;
-}
-
-.location-alexandroupoli {
-  top: 17%;
-  left: 65%;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 760px) {
-
-  .location {
-    width: 15px;
-    height: 15px;
-  }
-
-  .location i {
-    width: 10px;
-    height: 10px;
-  }
-
-  .location b {
-    font-size: 9px;
-  }
-
-}
-/* =========================
-   FINAL MAP PIN FIX
-========================= */
-
-.map-stage {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  position: relative;
-  overflow: hidden;
-  background: #0d0f0d;
-}
-
-.map-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  pointer-events: none;
-}
-
-
-/* NOKTALAR */
-
-.map-pin {
-  position: absolute;
-  z-index: 20;
-
-  width: 20px;
-  height: 20px;
-
-  padding: 0;
-  border: 0;
-  background: transparent;
-
-  cursor: pointer;
-}
-
-.map-pin > span {
-  position: absolute;
-  left: 3px;
-  top: 3px;
-
-  width: 14px;
-  height: 14px;
-
-  border-radius: 50%;
-
-  background: #f2762e;
-  border: 2px solid #ffffff;
-
-  box-shadow:
-    0 0 0 5px rgba(242, 118, 46, 0.16),
-    0 0 18px rgba(242, 118, 46, 0.75);
-
-  transition: transform 0.2s ease;
-}
-
-.map-pin:hover > span {
-  transform: scale(1.3);
-}
-
-
-/* ŞEHİR İSMİ
-   sadece mouse üzerine gelince çıkar
-*/
-
-.map-pin > b {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-
-  transform: translateX(-50%) translateY(5px);
-
-  padding: 6px 9px;
-
-  background: rgba(5, 7, 5, 0.96);
-  color: #ffffff;
-
-  border-radius: 4px;
-
-  font-size: 10px;
-  font-weight: 800;
-  white-space: nowrap;
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition:
-    opacity 0.18s ease,
-    transform 0.18s ease;
-}
-
-.map-pin:hover > b,
-.map-pin:focus-visible > b {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-
-/* =========================
-   ŞİMDİLİK NOKTA KONUMLARI
-========================= */
-
-.pin-thessaloniki {
-  top: 18.5%;
-  left: 47%;
-}
-
-.pin-chalkidiki {
-  top: 23%;
-  left: 50%;
-}
-
-.pin-kavala {
-  top: 17.5%;
-  left: 57%;
-}
-
-.pin-alexandroupoli {
-  top: 18%;
-  left: 64%;
-}
-
-
-/* =========================
-   ALTTAKİ ŞEHİR LİSTESİ
-========================= */
-
-.map-locations {
-  margin-top: 18px;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  border-top: 1px solid #333933;
-  border-bottom: 1px solid #333933;
-}
-
-.map-locations > span {
-  min-height: 58px;
-  padding: 0 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-
-  color: #c7ccc7;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  border-right: 1px solid #333933;
-}
-
-.map-locations > span:last-child {
-  border-right: 0;
-}
-
-.map-locations > span > i {
-  width: 8px;
-  height: 8px;
-
-  border-radius: 50%;
-  background: #f2762e;
-
-  flex: 0 0 8px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 760px) {
-
-  .map-pin {
-    width: 16px;
-    height: 16px;
-  }
-
-  .map-pin > span {
-    width: 10px;
-    height: 10px;
-  }
-
-  .map-locations {
-    grid-template-columns: 1fr 1fr;
-  }
-
-}
-/* FINAL MAP POSITION OVERRIDE */
-
-.pin-thessaloniki {
-  top: 29% !important;
-  left: 46% !important;
-}
-
-.pin-chalkidiki {
-  top: 35% !important;
-  left: 45% !important;
-}
-
-.pin-kavala {
-  top: 28% !important;
-  left: 58% !important;
-}
-
-.pin-alexandroupoli {
-  top: 29% !important;
-  left: 72% !important;
 }
