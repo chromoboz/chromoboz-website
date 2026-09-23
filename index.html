@@ -9,63 +9,54 @@
 
   <meta
     name="description"
-    content="CHROMO BOZ — Βιομηχανικές βαφές, αμμοβολές, συντήρηση μεταλλικών κατασκευών και εξειδικευμένο προσωπικό."
+    content="Βιομηχανικές βαφές, αμμοβολές, συντήρηση μεταλλικών κατασκευών και εξειδικευμένο προσωπικό."
   >
 
-  <link rel="stylesheet" href="styles.css?v=40">
-  <script src="script.js?v=40" defer></script>
+  <link rel="stylesheet" href="styles.css?v=100">
+  <script src="script.js?v=100" defer></script>
 </head>
+
 
 <body>
 
   <!-- TOP BAR -->
 
   <div class="topbar">
-    <div class="container topbar-inner">
-
-      <span>
-        INDUSTRIAL COATING · BLASTING · MAINTENANCE · PERSONNEL
-      </span>
-
-      <span>
-        CHROMO BOZ / INDUSTRIAL SERVICES
-      </span>
-
+    <div class="shell topbar-inner">
+      <span>INDUSTRIAL COATING · BLASTING · MAINTENANCE · PERSONNEL</span>
+      <span>CHROMO BOZ / INDUSTRIAL SERVICES</span>
     </div>
   </div>
 
 
   <!-- HEADER -->
 
-  <header class="site-header">
+  <header class="header">
 
-    <div class="container header-inner">
+    <div class="shell header-inner">
 
-      <a href="#home" class="brand" aria-label="CHROMO BOZ">
+      <a href="#home" class="logo">
         <img src="chromoboz-logo.png" alt="CHROMO BOZ">
       </a>
 
       <button
-        class="menu-toggle"
+        class="menu-button"
         type="button"
-        aria-label="Άνοιγμα μενού"
+        aria-label="Menu"
         aria-expanded="false"
       >
         ☰
       </button>
 
-      <nav class="navigation">
-
+      <nav class="nav">
         <a href="#services">Υπηρεσίες</a>
         <a href="#about">Εταιρεία</a>
         <a href="#presence">Παρουσία</a>
         <a href="#projects">Έργα</a>
 
-        <a href="#contact" class="nav-cta">
-          Επικοινωνία
-          <span>↗</span>
+        <a href="#contact" class="nav-button">
+          Επικοινωνία ↗
         </a>
-
       </nav>
 
     </div>
@@ -75,28 +66,23 @@
 
   <main>
 
-
     <!-- HERO -->
 
     <section class="hero" id="home">
 
-      <div class="hero-image">
+      <img
+        src="facility.webp"
+        alt="Industrial facility"
+        class="hero-background"
+      >
 
-        <img
-          src="facility.webp"
-          alt="CHROMO BOZ industrial services"
-        >
+      <div class="hero-shade"></div>
 
-      </div>
-
-      <div class="hero-overlay"></div>
-
-
-      <div class="container hero-content">
+      <div class="shell hero-inner">
 
         <div class="hero-copy">
 
-          <p class="eyebrow">
+          <p class="kicker">
             CHROMO BOZ / INDUSTRIAL SERVICES
           </p>
 
@@ -105,24 +91,21 @@
             <span>Προστασία που αντέχει.</span>
           </h1>
 
-          <p class="hero-description">
+          <p class="hero-text">
             Βιομηχανικές βαφές, αμμοβολές,
             συντήρηση μεταλλικών κατασκευών
             και εξειδικευμένο προσωπικό για
             απαιτητικά βιομηχανικά έργα.
           </p>
 
+          <div class="hero-buttons">
 
-          <div class="hero-actions">
-
-            <a href="#contact" class="button button-primary">
-              Συζητήστε το έργο σας
-              <span>↗</span>
+            <a href="#contact" class="button primary">
+              Συζητήστε το έργο σας ↗
             </a>
 
-            <a href="#projects" class="button button-ghost">
-              Δείτε τα έργα μας
-              <span>↓</span>
+            <a href="#projects" class="button secondary">
+              Δείτε τα έργα μας ↓
             </a>
 
           </div>
@@ -130,26 +113,21 @@
         </div>
 
 
-        <div class="hero-bottom">
+        <div class="hero-stats">
 
-          <div class="hero-stat">
+          <div>
             <strong>40+</strong>
-            <span>ενεργοί εργαζόμενοι</span>
+            <span>ΕΝΕΡΓΟΙ ΕΡΓΑΖΟΜΕΝΟΙ</span>
           </div>
 
-          <div class="hero-stat">
+          <div>
             <strong>04</strong>
-            <span>βασικές υπηρεσίες</span>
+            <span>ΒΑΣΙΚΕΣ ΥΠΗΡΕΣΙΕΣ</span>
           </div>
 
-          <div class="hero-stat hero-stat-wide">
-
+          <div class="wide-stat">
             <strong>CHROMO BOZ</strong>
-
-            <span>
-              INDUSTRIAL COATING & TECHNICAL SERVICES
-            </span>
-
+            <span>INDUSTRIAL COATING & TECHNICAL SERVICES</span>
           </div>
 
         </div>
@@ -161,13 +139,13 @@
 
     <!-- INTRO -->
 
-    <section class="intro-section">
+    <section class="intro">
 
-      <div class="container intro-grid">
+      <div class="shell two-columns">
 
         <div>
 
-          <p class="eyebrow">
+          <p class="kicker dark-kicker">
             ΤΙ ΚΑΝΟΥΜΕ
           </p>
 
@@ -188,7 +166,7 @@
           </p>
 
           <p>
-            Παράλληλα, διαθέτουμε εξειδικευμένο
+            Παράλληλα διαθέτουμε εξειδικευμένο
             προσωπικό για εργοτάξια και βιομηχανικές
             εγκαταστάσεις ανάλογα με τις ανάγκες
             κάθε έργου.
@@ -203,15 +181,15 @@
 
     <!-- SERVICES -->
 
-    <section class="services-section" id="services">
+    <section class="services section-dark" id="services">
 
-      <div class="container">
+      <div class="shell">
 
         <div class="section-heading">
 
           <div>
 
-            <p class="eyebrow">
+            <p class="kicker">
               01 / ΥΠΗΡΕΣΙΕΣ
             </p>
 
@@ -231,13 +209,14 @@
         </div>
 
 
-        <div class="services-grid">
+        <div class="service-grid">
+
 
           <a href="#contact" class="service-card">
 
-            <div class="service-top">
-              <span class="service-number">01</span>
-              <span class="service-icon">↗</span>
+            <div class="service-meta">
+              <span>01</span>
+              <span>↗</span>
             </div>
 
             <h3>
@@ -246,23 +225,21 @@
             </h3>
 
             <p>
-              Εφαρμογή προστατευτικών επιστρώσεων
-              και βιομηχανικών συστημάτων βαφής
-              σε μεταλλικές κατασκευές και εξοπλισμό.
+              Προστατευτικά συστήματα βαφής
+              για μεταλλικές κατασκευές,
+              βιομηχανικό εξοπλισμό και εγκαταστάσεις.
             </p>
 
-            <span class="service-en">
-              INDUSTRIAL PAINTING
-            </span>
+            <small>INDUSTRIAL PAINTING</small>
 
           </a>
 
 
           <a href="#contact" class="service-card">
 
-            <div class="service-top">
-              <span class="service-number">02</span>
-              <span class="service-icon">↗</span>
+            <div class="service-meta">
+              <span>02</span>
+              <span>↗</span>
             </div>
 
             <h3>
@@ -270,24 +247,21 @@
             </h3>
 
             <p>
-              Προετοιμασία και καθαρισμός
-              μεταλλικών επιφανειών για
-              απομάκρυνση σκουριάς,
-              παλαιών επιστρώσεων και ρύπων.
+              Καθαρισμός και προετοιμασία
+              μεταλλικών επιφανειών πριν
+              από την εφαρμογή επιστρώσεων.
             </p>
 
-            <span class="service-en">
-              ABRASIVE BLASTING
-            </span>
+            <small>ABRASIVE BLASTING</small>
 
           </a>
 
 
           <a href="#contact" class="service-card">
 
-            <div class="service-top">
-              <span class="service-number">03</span>
-              <span class="service-icon">↗</span>
+            <div class="service-meta">
+              <span>03</span>
+              <span>↗</span>
             </div>
 
             <h3>
@@ -296,23 +270,21 @@
             </h3>
 
             <p>
-              Εργασίες προστασίας και συντήρησης
-              βιομηχανικού εξοπλισμού και
-              μεταλλικών κατασκευών.
+              Συντήρηση και προστασία
+              μεταλλικών κατασκευών και
+              βιομηχανικού εξοπλισμού.
             </p>
 
-            <span class="service-en">
-              METAL MAINTENANCE
-            </span>
+            <small>METAL MAINTENANCE</small>
 
           </a>
 
 
           <a href="#contact" class="service-card">
 
-            <div class="service-top">
-              <span class="service-number">04</span>
-              <span class="service-icon">↗</span>
+            <div class="service-meta">
+              <span>04</span>
+              <span>↗</span>
             </div>
 
             <h3>
@@ -321,16 +293,15 @@
             </h3>
 
             <p>
-              Παροχή τεχνικού και εξειδικευμένου
-              προσωπικού για βιομηχανικές
+              Παροχή τεχνικού προσωπικού
+              για βιομηχανικά έργα,
               εγκαταστάσεις και εργοτάξια.
             </p>
 
-            <span class="service-en">
-              SKILLED PERSONNEL
-            </span>
+            <small>SKILLED PERSONNEL</small>
 
           </a>
+
 
         </div>
 
@@ -341,29 +312,29 @@
 
     <!-- ABOUT -->
 
-    <section class="about-section" id="about">
+    <section class="about" id="about">
 
-      <div class="container about-grid">
+      <div class="shell about-grid">
 
-        <div class="about-image">
+        <div class="about-photo">
 
           <img
             src="plant.webp"
-            alt="CHROMO BOZ industrial project"
+            alt="Industrial project"
             loading="lazy"
           >
 
-          <div class="image-tag">
-            <span>INDUSTRIAL FIELD</span>
+          <div class="photo-badge">
+            <small>INDUSTRIAL FIELD</small>
             <strong>CHROMO BOZ</strong>
           </div>
 
         </div>
 
 
-        <div class="about-content">
+        <div class="about-copy">
 
-          <p class="eyebrow">
+          <p class="kicker">
             02 / CHROMO BOZ
           </p>
 
@@ -372,11 +343,11 @@
             Εκεί όπου η εμπειρία μετράει.
           </h2>
 
-          <p class="about-lead">
+          <p class="lead">
             Η ποιότητα ενός βιομηχανικού έργου
-            εξαρτάται από τη σωστή προετοιμασία,
-            την τεχνική γνώση και την υπευθυνότητα
-            στο πεδίο.
+            βασίζεται στη σωστή προετοιμασία,
+            την τεχνική γνώση και την
+            υπευθυνότητα στο πεδίο.
           </p>
 
           <p>
@@ -386,9 +357,8 @@
             και τεχνικής στελέχωσης.
           </p>
 
-          <a href="#contact" class="text-link">
-            Επικοινωνήστε μαζί μας
-            <span>↗</span>
+          <a href="#contact" class="inline-link">
+            Επικοινωνήστε μαζί μας ↗
           </a>
 
         </div>
@@ -400,54 +370,48 @@
 
     <!-- PRESENCE -->
 
-    <section class="presence-section" id="presence">
+    <section class="presence" id="presence">
 
-      <div class="container presence-grid">
+      <div class="shell presence-grid">
 
 
-        <!-- LEFT SIDE -->
+        <div class="presence-copy">
 
-        <div class="presence-content">
-
-          <p class="eyebrow">
+          <p class="kicker">
             03 / ΔΙΚΤΥΟ & ΠΑΡΟΥΣΙΑ
           </p>
 
           <h2>
             40+ ενεργοί εργαζόμενοι<br>
-            <em>σε ενεργά έργα.</em>
+            <span>σε ενεργά έργα.</span>
           </h2>
 
-          <p class="presence-intro">
-            Η ομάδα μας διαθέτει αυτή τη στιγμή
-            περισσότερους από 40 ενεργούς εργαζόμενους
-            σε βιομηχανικά έργα, εγκαταστάσεις και
-            εργοτάξια στη Βόρεια Ελλάδα.
+          <p class="presence-lead">
+            Η ομάδα μας διαθέτει περισσότερους
+            από 40 ενεργούς εργαζόμενους σε
+            βιομηχανικά έργα και εγκαταστάσεις
+            στη Βόρεια Ελλάδα.
           </p>
 
 
-          <div class="presence-metrics">
+          <div class="metric-grid">
 
-            <div class="presence-metric">
+            <div class="metric">
 
-              <span class="metric-number">
-                40+
-              </span>
+              <strong>40+</strong>
 
-              <span class="metric-label">
+              <span>
                 Ενεργοί εργαζόμενοι
               </span>
 
             </div>
 
 
-            <div class="presence-metric">
+            <div class="metric">
 
-              <span class="metric-number">
-                04
-              </span>
+              <strong>04</strong>
 
-              <span class="metric-label">
+              <span>
                 Ενεργές περιοχές
               </span>
 
@@ -456,47 +420,28 @@
           </div>
 
 
-          <div class="presence-list">
+          <div class="presence-detail">
 
-            <div class="presence-item">
+            <strong>
+              Αντικείμενο εργασιών
+            </strong>
 
-              <strong>
-                Βιομηχανικά έργα
-              </strong>
-
-              <p>
-                Βαφές, αμμοβολές, συντήρηση
-                μεταλλικών κατασκευών και τεχνική
-                υποστήριξη.
-              </p>
-
-            </div>
-
-
-            <div class="presence-item">
-
-              <strong>
-                Ομάδες στο πεδίο
-              </strong>
-
-              <p>
-                Εξειδικευμένο προσωπικό που
-                εργάζεται σε διαφορετικά ενεργά
-                βιομηχανικά έργα.
-              </p>
-
-            </div>
+            <p>
+              Βιομηχανικές βαφές, αμμοβολές,
+              συντήρηση μετάλλων και τεχνική
+              υποστήριξη έργων.
+            </p>
 
           </div>
 
         </div>
 
 
-        <!-- MAP SIDE -->
+        <!-- MAP -->
 
-        <div class="presence-map-card">
+        <div class="map-card">
 
-          <div class="map-title-row">
+          <div class="map-header">
 
             <h3>
               Παρουσία στην Ελλάδα
@@ -509,56 +454,44 @@
           </div>
 
 
-          <div class="real-greece-map">
+          <div class="map-stage">
 
             <img
-              src="greece-map-dark.png"
+              src="greece-map-dark.png?v=5"
               alt="Χάρτης της Ελλάδας"
-              class="greece-map-image"
+              class="map-image"
             >
 
 
-            <!-- THESSALONIKI -->
-
-            <div class="map-location thessaloniki">
-              <span class="map-dot"></span>
-              <strong>Thessaloniki</strong>
+            <div class="location location-thessaloniki">
+              <i></i>
+              <b>Thessaloniki</b>
             </div>
 
 
-            <!-- CHALKIDIKI -->
-
-            <div class="map-location chalkidiki">
-              <span class="map-dot"></span>
-              <strong>Chalkidiki</strong>
+            <div class="location location-chalkidiki">
+              <i></i>
+              <b>Chalkidiki</b>
             </div>
 
 
-            <!-- KAVALA -->
-
-            <div class="map-location kavala">
-              <span class="map-dot"></span>
-              <strong>Kavala</strong>
+            <div class="location location-kavala">
+              <i></i>
+              <b>Kavala</b>
             </div>
 
 
-            <!-- ALEXANDROUPOLI -->
-
-            <div class="map-location alexandroupoli">
-              <span class="map-dot"></span>
-              <strong>Alexandroupoli</strong>
+            <div class="location location-alexandroupoli">
+              <i></i>
+              <b>Alexandroupoli</b>
             </div>
 
           </div>
 
 
-          <div class="map-legend">
-
-            <span>
-              <i></i>
-              Active project locations
-            </span>
-
+          <div class="map-footer">
+            <i></i>
+            Active project locations
           </div>
 
         </div>
@@ -570,15 +503,15 @@
 
     <!-- PROJECTS -->
 
-    <section class="projects-section" id="projects">
+    <section class="projects section-dark" id="projects">
 
-      <div class="container">
+      <div class="shell">
 
-        <div class="section-heading projects-heading">
+        <div class="section-heading">
 
           <div>
 
-            <p class="eyebrow">
+            <p class="kicker">
               04 / ΕΡΓΑ & ΠΕΔΙΟ
             </p>
 
@@ -598,14 +531,12 @@
         </div>
 
 
-        <div class="projects-grid">
+        <div class="project-grid">
 
-          <figure class="project project-large">
 
-            <a
-              href="plant.webp"
-              class="gallery-link"
-            >
+          <figure class="project-card">
+
+            <a href="plant.webp" class="gallery-link">
 
               <img
                 src="plant.webp"
@@ -613,39 +544,21 @@
                 loading="lazy"
               >
 
-              <span class="project-arrow">
-                ↗
-              </span>
+              <span>↗</span>
 
             </a>
 
             <figcaption>
-
-              <div>
-
-                <strong>
-                  Βιομηχανικές εγκαταστάσεις
-                </strong>
-
-                <span>
-                  INDUSTRIAL FACILITIES
-                </span>
-
-              </div>
-
+              <strong>Βιομηχανικές εγκαταστάσεις</strong>
               <small>01</small>
-
             </figcaption>
 
           </figure>
 
 
-          <figure class="project">
+          <figure class="project-card">
 
-            <a
-              href="red-steel.webp"
-              class="gallery-link"
-            >
+            <a href="red-steel.webp" class="gallery-link">
 
               <img
                 src="red-steel.webp"
@@ -653,39 +566,21 @@
                 loading="lazy"
               >
 
-              <span class="project-arrow">
-                ↗
-              </span>
+              <span>↗</span>
 
             </a>
 
             <figcaption>
-
-              <div>
-
-                <strong>
-                  Βιομηχανικές βαφές
-                </strong>
-
-                <span>
-                  INDUSTRIAL COATING
-                </span>
-
-              </div>
-
+              <strong>Βιομηχανικές βαφές</strong>
               <small>02</small>
-
             </figcaption>
 
           </figure>
 
 
-          <figure class="project">
+          <figure class="project-card">
 
-            <a
-              href="steel.webp"
-              class="gallery-link"
-            >
+            <a href="steel.webp" class="gallery-link">
 
               <img
                 src="steel.webp"
@@ -693,39 +588,21 @@
                 loading="lazy"
               >
 
-              <span class="project-arrow">
-                ↗
-              </span>
+              <span>↗</span>
 
             </a>
 
             <figcaption>
-
-              <div>
-
-                <strong>
-                  Μεταλλικές κατασκευές
-                </strong>
-
-                <span>
-                  STEEL STRUCTURES
-                </span>
-
-              </div>
-
+              <strong>Μεταλλικές κατασκευές</strong>
               <small>03</small>
-
             </figcaption>
 
           </figure>
 
 
-          <figure class="project project-large">
+          <figure class="project-card">
 
-            <a
-              href="tank.webp"
-              class="gallery-link"
-            >
+            <a href="tank.webp" class="gallery-link">
 
               <img
                 src="tank.webp"
@@ -733,31 +610,17 @@
                 loading="lazy"
               >
 
-              <span class="project-arrow">
-                ↗
-              </span>
+              <span>↗</span>
 
             </a>
 
             <figcaption>
-
-              <div>
-
-                <strong>
-                  Βιομηχανικός εξοπλισμός
-                </strong>
-
-                <span>
-                  INDUSTRIAL EQUIPMENT
-                </span>
-
-              </div>
-
+              <strong>Βιομηχανικός εξοπλισμός</strong>
               <small>04</small>
-
             </figcaption>
 
           </figure>
+
 
         </div>
 
@@ -768,13 +631,13 @@
 
     <!-- WHY -->
 
-    <section class="why-section">
+    <section class="why">
 
-      <div class="container why-grid">
+      <div class="shell why-grid">
 
         <div>
 
-          <p class="eyebrow">
+          <p class="kicker">
             05 / ΓΙΑΤΙ CHROMO BOZ
           </p>
 
@@ -800,9 +663,8 @@
 
               <p>
                 Πρακτική εμπειρία σε
-                βιομηχανικά περιβάλλοντα,
-                μεταλλικές κατασκευές και
-                απαιτητικά εργοτάξια.
+                βιομηχανικά περιβάλλοντα
+                και απαιτητικά εργοτάξια.
               </p>
 
             </div>
@@ -822,7 +684,6 @@
 
               <p>
                 Δυνατότητα στελέχωσης έργων
-                με εξειδικευμένους εργαζομένους
                 ανάλογα με τις ανάγκες
                 κάθε συνεργασίας.
               </p>
@@ -843,9 +704,8 @@
               </h3>
 
               <p>
-                Η προετοιμασία, η εφαρμογή
-                και η τελική εικόνα αποτελούν
-                μέρος της ίδιας ευθύνης.
+                Από την προετοιμασία μέχρι
+                την τελική εφαρμογή.
               </p>
 
             </div>
@@ -861,13 +721,13 @@
 
     <!-- CONTACT -->
 
-    <section class="cta-section" id="contact">
+    <section class="contact" id="contact">
 
-      <div class="container cta-grid">
+      <div class="shell contact-grid">
 
         <div>
 
-          <p class="eyebrow">
+          <p class="kicker contact-kicker">
             ΜΙΛΗΣΤΕ ΜΑΖΙ ΜΑΣ
           </p>
 
@@ -879,38 +739,30 @@
         </div>
 
 
-        <div class="cta-links">
+        <div class="contact-links">
 
           <a href="tel:+306971650427">
 
-            <small>
-              PHONE
-            </small>
+            <small>PHONE</small>
 
             <strong>
               +30 697 1650 427
             </strong>
 
-            <span>
-              ↗
-            </span>
+            <span>↗</span>
 
           </a>
 
 
           <a href="mailto:info@chromoboz.com">
 
-            <small>
-              EMAIL
-            </small>
+            <small>EMAIL</small>
 
             <strong>
               info@chromoboz.com
             </strong>
 
-            <span>
-              ↗
-            </span>
+            <span>↗</span>
 
           </a>
 
@@ -920,14 +772,16 @@
 
     </section>
 
+
   </main>
 
 
   <!-- FOOTER -->
 
-  <footer class="site-footer">
+  <footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="shell footer-grid">
+
 
       <div class="footer-brand">
 
@@ -937,9 +791,8 @@
         >
 
         <p>
-          Industrial coating,
-          blasting, maintenance
-          & skilled personnel.
+          Industrial coating, blasting,
+          maintenance & skilled personnel.
         </p>
 
       </div>
@@ -947,9 +800,7 @@
 
       <div class="footer-column">
 
-        <strong>
-          Υπηρεσίες
-        </strong>
+        <strong>Υπηρεσίες</strong>
 
         <a href="#services">
           Βιομηχανικές Βαφές
@@ -972,9 +823,7 @@
 
       <div class="footer-column">
 
-        <strong>
-          Εταιρεία
-        </strong>
+        <strong>Εταιρεία</strong>
 
         <a href="#about">
           CHROMO BOZ
@@ -993,9 +842,7 @@
 
       <div class="footer-column">
 
-        <strong>
-          Επικοινωνία
-        </strong>
+        <strong>Επικοινωνία</strong>
 
         <a href="tel:+306971650427">
           +30 697 1650 427
@@ -1007,10 +854,11 @@
 
       </div>
 
+
     </div>
 
 
-    <div class="container footer-bottom">
+    <div class="shell footer-bottom">
 
       <span>
         © <span id="year">2026</span> CHROMO BOZ
@@ -1032,7 +880,7 @@
     <button
       class="lightbox-close"
       type="button"
-      aria-label="Κλείσιμο"
+      aria-label="Close"
     >
       ×
     </button>
