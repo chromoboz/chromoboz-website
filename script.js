@@ -1,46 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* =========================
-     MOBILE MENU
-     ========================= */
+  /* MOBILE MENU */
 
-  const toggle = document.querySelector(".menu-toggle");
-  const nav = document.querySelector(".navigation");
+  const menuButton = document.querySelector(".menu-button");
+  const nav = document.querySelector(".nav");
 
-  if (toggle && nav) {
+  if (menuButton && nav) {
 
-    toggle.addEventListener("click", () => {
+    menuButton.addEventListener("click", () => {
       const open = nav.classList.toggle("open");
 
-      toggle.setAttribute(
+      menuButton.setAttribute(
         "aria-expanded",
         open ? "true" : "false"
       );
 
-      toggle.textContent = open ? "✕" : "☰";
+      menuButton.textContent = open ? "✕" : "☰";
     });
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "☰";
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
       });
     });
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         nav.classList.remove("open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.textContent = "☰";
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.textContent = "☰";
       }
     });
+
   }
 
 
-  /* =========================
-     CURRENT YEAR
-     ========================= */
+  /* CURRENT YEAR */
 
   const year = document.getElementById("year");
 
@@ -49,9 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 
-  /* =========================
-     IMAGE LIGHTBOX
-     ========================= */
+  /* LIGHTBOX */
 
   const dialog = document.getElementById("lightbox");
 
@@ -71,15 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         event.preventDefault();
 
-        const thumbnail = link.querySelector("img");
+        const image = link.querySelector("img");
 
-        if (dialogImage && thumbnail) {
+        if (dialogImage && image) {
           dialogImage.src = link.getAttribute("href");
-          dialogImage.alt = thumbnail.alt || "CHROMO BOZ";
+          dialogImage.alt = image.alt || "CHROMO BOZ";
         }
 
         dialog.showModal();
         document.body.style.overflow = "hidden";
+
       });
 
     });
@@ -100,18 +96,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     dialog.addEventListener("close", () => {
+
       document.body.style.overflow = "";
 
       if (dialogImage) {
         dialogImage.src = "";
       }
-    });
 
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && dialog.open) {
-        dialog.close();
-      }
     });
 
   }
