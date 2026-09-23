@@ -1252,3 +1252,24 @@ h2 {
   }
 
 }
+/* FINAL MAP POSITION OVERRIDE */
+
+.pin-thessaloniki {
+  top: 29% !important;
+  left: 46% !important;
+}
+
+.pin-chalkidiki {
+  top: 35% !important;
+  left: 45% !important;
+}
+
+.pin-kavala {
+  top: 28% !important;
+  left: 58% !important;
+}
+
+.pin-alexandroupoli {
+  top: 29% !important;
+  left: 72% !important;
+}
