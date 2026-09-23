@@ -1061,3 +1061,194 @@ h2 {
   }
 
 }
+/* =========================
+   FINAL MAP PIN FIX
+========================= */
+
+.map-stage {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  position: relative;
+  overflow: hidden;
+  background: #0d0f0d;
+}
+
+.map-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}
+
+
+/* NOKTALAR */
+
+.map-pin {
+  position: absolute;
+  z-index: 20;
+
+  width: 20px;
+  height: 20px;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.map-pin > span {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: #f2762e;
+  border: 2px solid #ffffff;
+
+  box-shadow:
+    0 0 0 5px rgba(242, 118, 46, 0.16),
+    0 0 18px rgba(242, 118, 46, 0.75);
+
+  transition: transform 0.2s ease;
+}
+
+.map-pin:hover > span {
+  transform: scale(1.3);
+}
+
+
+/* ŞEHİR İSMİ
+   sadece mouse üzerine gelince çıkar
+*/
+
+.map-pin > b {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+
+  transform: translateX(-50%) translateY(5px);
+
+  padding: 6px 9px;
+
+  background: rgba(5, 7, 5, 0.96);
+  color: #ffffff;
+
+  border-radius: 4px;
+
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.map-pin:hover > b,
+.map-pin:focus-visible > b {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================
+   ŞİMDİLİK NOKTA KONUMLARI
+========================= */
+
+.pin-thessaloniki {
+  top: 18.5%;
+  left: 47%;
+}
+
+.pin-chalkidiki {
+  top: 23%;
+  left: 50%;
+}
+
+.pin-kavala {
+  top: 17.5%;
+  left: 57%;
+}
+
+.pin-alexandroupoli {
+  top: 18%;
+  left: 64%;
+}
+
+
+/* =========================
+   ALTTAKİ ŞEHİR LİSTESİ
+========================= */
+
+.map-locations {
+  margin-top: 18px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  border-top: 1px solid #333933;
+  border-bottom: 1px solid #333933;
+}
+
+.map-locations > span {
+  min-height: 58px;
+  padding: 0 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  color: #c7ccc7;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  border-right: 1px solid #333933;
+}
+
+.map-locations > span:last-child {
+  border-right: 0;
+}
+
+.map-locations > span > i {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #f2762e;
+
+  flex: 0 0 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .map-pin {
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-pin > span {
+    width: 10px;
+    height: 10px;
+  }
+
+  .map-locations {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
