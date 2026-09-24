@@ -2007,3 +2007,98 @@ h2 {
 .instagram-link:hover {
   color: #ffffff;
 }
+* =========================================================
+   SOCIAL FOOTER
+========================================================= */
+
+.social-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 24px;
+
+  margin-top: 45px;
+  padding-top: 30px;
+
+  border-top: 1px solid var(--line);
+}
+
+.social-box {
+  min-height: 100px;
+
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 20px 24px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: #111411;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-box:hover {
+  background: #181c18;
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+
+.social-box svg {
+  width: 42px;
+  height: 42px;
+
+  fill: none;
+  stroke: var(--orange);
+  stroke-width: 1.7;
+}
+
+.social-box div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.social-box small {
+  color: #747b74;
+
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.social-box strong {
+  color: #f3f3ee;
+
+  font-size: 20px;
+}
+
+.social-box > span {
+  color: var(--orange);
+
+  font-size: 24px;
+}
+
+
+/* LINKEDIN TEMPORARILY */
+
+.social-linkedin {
+  cursor: default;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .social-footer {
+    grid-template-columns: 1fr;
+  }
+
+}
