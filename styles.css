@@ -2007,93 +2007,100 @@ h2 {
 .instagram-link:hover {
   color: #ffffff;
 }
-* =========================================================
+/* =========================
    SOCIAL FOOTER
-========================================================= */
+========================= */
 
 .social-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 
-  gap: 24px;
+  margin-top: 42px;
+  margin-bottom: 28px;
+  padding-top: 28px;
 
-  margin-top: 45px;
-  padding-top: 30px;
-
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255,255,255,0.09);
 }
 
 .social-box {
-  min-height: 100px;
+  min-height: 94px;
 
   display: grid;
-  grid-template-columns: 52px 1fr auto;
+  grid-template-columns: 56px 1fr auto;
   align-items: center;
-
   gap: 18px;
 
-  padding: 20px 24px;
-
-  border: 1px solid rgba(255,255,255,0.1);
+  padding: 18px 22px;
 
   background: #111411;
+  border: 1px solid rgba(255,255,255,0.09);
+
+  text-decoration: none;
 
   transition:
-    background 0.25s ease,
     border-color 0.25s ease,
+    background 0.25s ease,
     transform 0.25s ease;
 }
 
 .social-box:hover {
-  background: #181c18;
   border-color: var(--orange);
+  background: #181c18;
   transform: translateY(-3px);
 }
 
-.social-box svg {
-  width: 42px;
-  height: 42px;
+.social-icon {
+  width: 50px;
+  height: 50px;
 
-  fill: none;
-  stroke: var(--orange);
-  stroke-width: 1.7;
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+
+  color: var(--orange);
+
+  font-size: 26px;
+  font-weight: 800;
 }
 
-.social-box div {
+.linkedin-icon {
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+}
+
+.social-text {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.social-box small {
-  color: #747b74;
+.social-text small {
+  color: #777d77;
 
   font-size: 9px;
   font-weight: 900;
   letter-spacing: 1.4px;
 }
 
-.social-box strong {
-  color: #f3f3ee;
+.social-text strong {
+  color: #f2f2ed;
 
-  font-size: 20px;
+  font-size: 19px;
 }
 
-.social-box > span {
+.social-arrow {
   color: var(--orange);
 
-  font-size: 24px;
+  font-size: 23px;
+  font-weight: 700;
 }
-
-
-/* LINKEDIN TEMPORARILY */
 
 .social-linkedin {
   cursor: default;
 }
-
-
-/* MOBILE */
 
 @media (max-width: 700px) {
 
