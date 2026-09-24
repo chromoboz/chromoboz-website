@@ -108,21 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-const previewImage = document.getElementById("servicePreviewImage");
-const previewBox = document.getElementById("servicePreview");
-const serviceCards = document.querySelectorAll(".service-card[data-image]");
 
-if (previewImage && previewBox && serviceCards.length) {
-  serviceCards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      const nextImage = card.dataset.image;
-
-      previewBox.classList.add("is-changing");
-
-      setTimeout(() => {
-        previewImage.src = nextImage;
-        previewBox.classList.remove("is-changing");
-      }, 120);
-    });
-  });
-}
