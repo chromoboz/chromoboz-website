@@ -1399,3 +1399,20 @@ h2 {
 .contact-links a > span {
   font-size: 19px !important;
 }
+/* CHALKIDIKI TOOLTIP - SHOW BELOW */
+
+.map-pin:nth-of-type(2) > b {
+  top: 30px;
+  bottom: auto;
+
+  transform:
+    translateX(-50%)
+    translateY(-5px);
+}
+
+.map-pin:nth-of-type(2):hover > b,
+.map-pin:nth-of-type(2):focus-visible > b {
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
