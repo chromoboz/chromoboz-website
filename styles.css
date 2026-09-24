@@ -1960,3 +1960,26 @@ h2 {
   }
 
 }
+/* FOOTER SOCIAL ALIGNMENT FIX */
+
+.footer-company,
+.footer-contact {
+  position: relative;
+}
+
+.footer-company .footer-social-link,
+.footer-contact .footer-social-link {
+  margin-top: 24px;
+}
+
+.footer-company .footer-social-link {
+  position: absolute;
+  top: 125px;
+  left: 0;
+}
+
+.footer-contact .footer-social-link {
+  position: absolute;
+  top: 125px;
+  left: 0;
+}
