@@ -1660,3 +1660,38 @@ h2 {
   width: 100%;
   height: auto;
 }
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 4px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.language-switcher a {
+  color: #7f867f;
+  transition: color 0.2s ease;
+}
+
+.language-switcher a:hover,
+.language-switcher a.active {
+  color: var(--orange);
+}
+
+.language-switcher span {
+  color: #4c514c;
+}
+
+@media (max-width: 760px) {
+
+  .language-switcher {
+    margin: 12px 0 0;
+    padding: 13px 0;
+  }
+
+}
