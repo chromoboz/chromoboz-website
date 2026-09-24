@@ -1999,3 +1999,11 @@ h2 {
   }
 
 }
+.instagram-link {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.instagram-link:hover {
+  color: #ffffff;
+}
