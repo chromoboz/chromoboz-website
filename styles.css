@@ -1725,3 +1725,96 @@ h2 {
 .service-card:hover {
   background: #202420;
 }
+/* =========================================
+   SERVICE CARD IMAGE HOVER
+========================================= */
+
+.service-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #151815;
+}
+
+/* FOTOĞRAF */
+
+.service-card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background-image: var(--service-image);
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+  transform: scale(1.06);
+
+  transition:
+    opacity 0.35s ease,
+    transform 0.55s ease;
+
+  z-index: -2;
+}
+
+/* FOTOĞRAFIN ÜSTÜNE KOYU FİLTRE */
+
+.service-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(9, 11, 9, 0.35),
+      rgba(9, 11, 9, 0.78)
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+
+  z-index: -1;
+}
+
+
+/* MOUSE ÜSTÜNE GELİNCE */
+
+.service-card:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+
+/* YAZILAR FOTOĞRAFIN ÜSTÜNDE KALSIN */
+
+.service-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* HOVER'DA YAZILAR DAHA NET */
+
+.service-card:hover h3 {
+  color: #ffffff;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.service-card:hover small {
+  color: #ffffff;
+}
+
+.service-card:hover .service-meta {
+  color: var(--orange);
+}
