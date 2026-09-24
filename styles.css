@@ -1361,3 +1361,41 @@ h2 {
   }
 
 }
+/* CONTACT - EXTRA COMPACT */
+
+.contact {
+  padding: 28px 0 !important;
+}
+
+.contact-grid {
+  grid-template-columns: 0.9fr 1.1fr !important;
+  gap: 7% !important;
+}
+
+.contact-kicker {
+  margin-bottom: 8px !important;
+  font-size: 8px !important;
+}
+
+.contact h2 {
+  font-size: clamp(34px, 3.3vw, 52px) !important;
+  line-height: 0.98 !important;
+}
+
+.contact-links a {
+  min-height: 52px !important;
+  padding: 8px 45px 8px 0 !important;
+}
+
+.contact-links small {
+  font-size: 7px !important;
+}
+
+.contact-links strong {
+  margin-top: 2px !important;
+  font-size: clamp(17px, 1.5vw, 23px) !important;
+}
+
+.contact-links a > span {
+  font-size: 19px !important;
+}
