@@ -1695,3 +1695,33 @@ h2 {
   }
 
 }
+/* SERVICE HOVER PREVIEW */
+
+.service-preview {
+  margin-top: 28px;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #111;
+}
+
+.service-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s ease, transform 0.35s ease;
+}
+
+.service-preview.is-changing img {
+  opacity: 0.25;
+  transform: scale(1.015);
+}
+
+.service-card {
+  cursor: pointer;
+}
+
+.service-card:hover {
+  background: #202420;
+}
