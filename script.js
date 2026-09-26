@@ -125,18 +125,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const text = english
       ? {
           title: "Your privacy",
-          body: "With your permission, we use Google Analytics cookies to measure visits and how our website is used. Rejecting does not affect the website. Your choice is saved for 6 months and can be changed using the Cookies button.",
+          body: "With your permission, we use Google Analytics cookies to measure visits and how our website is used. Rejecting does not affect the website. Your choice is saved for 6 months and can be changed using Cookie preferences in the footer.",
           accept: "Accept analytics",
           reject: "Reject analytics",
-          settings: "Cookies",
+          settings: "Cookie preferences",
           details: "How Google uses data"
         }
       : {
           title: "Το απόρρητό σας",
-          body: "Με τη συγκατάθεσή σας, χρησιμοποιούμε cookies του Google Analytics για τη μέτρηση επισκέψεων και της χρήσης του ιστοτόπου. Η απόρριψη δεν επηρεάζει τη λειτουργία του. Η επιλογή σας αποθηκεύεται για 6 μήνες και αλλάζει από το κουμπί Cookies.",
+          body: "Με τη συγκατάθεσή σας, χρησιμοποιούμε cookies του Google Analytics για τη μέτρηση επισκέψεων και της χρήσης του ιστοτόπου. Η απόρριψη δεν επηρεάζει τη λειτουργία του. Η επιλογή σας αποθηκεύεται για 6 μήνες και αλλάζει από τις Προτιμήσεις cookies στο κάτω μέρος της σελίδας.",
           accept: "Αποδοχή στατιστικών",
           reject: "Απόρριψη στατιστικών",
-          settings: "Cookies",
+          settings: "Προτιμήσεις cookies",
           details: "Πώς χρησιμοποιεί η Google τα δεδομένα"
         };
 
@@ -190,7 +190,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startAnalytics() {
       window["ga-disable-" + measurementId] = false;
-      if (analyticsStarted) return;
+      if (analyticsStarted) {
+        window.gtag("consent", "update", { analytics_storage: "granted" });
+        return;
+      }
       analyticsStarted = true;
 
       window.dataLayer = window.dataLayer || [];
@@ -226,7 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const style = document.createElement("style");
     style.textContent = `
       #cb-cookie-panel {
-        position: fixed; bottom: 70px; left: 16px;
+        position: fixed; bottom: 16px; left: 16px;
         width: min(440px, calc(100vw - 32px));
         max-height: 75vh; overflow: auto;
         box-sizing: border-box; padding: 22px;
@@ -252,7 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       #cb-cookie-panel button { flex: 1; }
       #cb-cookie-settings {
-        position: fixed; bottom: 16px; left: 16px; z-index: 9999;
+        position: static; background: transparent; color: inherit; border: 0; padding: 8px 0; border-radius: 0; font: inherit; text-decoration: underline; cursor: pointer;
       }
       #cb-cookie-panel button:focus-visible,
       #cb-cookie-settings:focus-visible {
@@ -314,10 +317,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       showPanel(false);
-      settings.focus();
+      settings.focus({ preventScroll: true });
     });
 
-    document.body.append(panel, settings);
+    document.body.append(panel);
+    const cookieFooter = document.querySelector(".footer-bottom");
+    (cookieFooter || document.body).appendChild(settings);
 
     const choice = readChoice();
     showPanel(choice === null);
