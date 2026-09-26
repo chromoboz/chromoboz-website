@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-* COOKIE PREFERENCES + GOOGLE ANALYTICS */
+/* COOKIE PREFERENCES + GOOGLE ANALYTICS */
 (() => {
   function initCookies() {
     if (document.getElementById("cb-cookie-panel")) return;
