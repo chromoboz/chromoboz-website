@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("cb-cookie-panel")) return;
 
     const measurementId = "G-7CQG8F53NB";
-    const storageKey = "chromoboz-analytics-consent-v1";
+    const storageKey = "ChoromoBoz-analytics-consent-v1";
     const lifetime = 180 * 24 * 60 * 60 * 1000;
     let analyticsStarted = false;
 
@@ -170,8 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
         "",
         location.hostname,
         "." + location.hostname,
-        "chromoboz.com",
-        ".chromoboz.com"
+        "ChoromoBoz.com",
+        ".ChoromoBoz.com"
       ];
 
       document.cookie.split(";").forEach((cookie) => {
