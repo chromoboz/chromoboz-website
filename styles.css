@@ -1674,3 +1674,8 @@ h2 {
   }
 
 }
+/* Çerez başlığının harf ve kelime aralıkları */
+#cb-cookie-panel h2 {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
