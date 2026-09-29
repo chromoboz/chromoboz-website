@@ -1772,3 +1772,30 @@ h2 {
     gap: 30px;
   }
 }
+/* SINGLE PROJECTS IMAGE */
+
+#projects.sinergasia-section {
+  padding: 34px 0 38px;
+  background: #101210;
+}
+
+#projects.sinergasia-section .sinergasia-container {
+  width: min(96%, 1800px);
+}
+
+#projects.sinergasia-section .sinergasia-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  #projects.sinergasia-section {
+    padding: 22px 0 24px;
+  }
+
+  #projects.sinergasia-section .sinergasia-container {
+    width: 96%;
+  }
+}
