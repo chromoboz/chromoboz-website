@@ -1529,3 +1529,139 @@ h2 {
 #about .photo-badge {
   color: #f5f3ed;
 }
+* ACTIVE PROJECTS SLIDER */
+
+.energy-projects-section {
+  padding: 42px 0 28px;
+}
+
+.energy-slider {
+  width: min(72%, 720px);
+  margin: 0 auto;
+}
+
+.energy-title {
+  margin: 0 0 20px;
+  text-align: center;
+  color: #f5f3ed;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: 4px;
+}
+
+.energy-title span {
+  color: var(--orange);
+}
+
+.energy-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border: 1px solid #343934;
+}
+
+.energy-track::-webkit-scrollbar {
+  display: none;
+}
+
+.energy-slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: #101610;
+}
+
+.energy-photo {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1.7;
+  background: #101610;
+}
+
+.energy-photo img {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  max-width: none;
+  height: auto;
+  transform: translateY(-12%);
+}
+
+.energy-left img {
+  left: 0;
+}
+
+.energy-right img {
+  left: -100%;
+}
+
+.energy-slide figcaption {
+  padding: 14px 12px;
+  text-align: center;
+  color: #f5f3ed;
+  font-size: 14px;
+}
+
+.energy-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  color: #f5f3ed;
+}
+
+.energy-controls button {
+  width: 46px;
+  height: 42px;
+  border: 1px solid #f2762e;
+  background: #f2762e;
+  color: #101210;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.energy-controls button:hover {
+  background: #ff8a45;
+}
+
+.energy-controls button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+
+.energy-controls button:focus-visible,
+.energy-track:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+.energy-count {
+  min-width: 50px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* Future standalone project photos */
+
+.energy-photo.energy-full img {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  .energy-slider {
+    width: 88%;
+  }
+
+  .energy-title {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+}
