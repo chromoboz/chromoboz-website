@@ -1711,3 +1711,64 @@ h2 {
     grid-template-columns: 1fr !important;
   }
 }
+/* PROJECTS - CLEAN VERSION */
+
+#projects.cb-regional {
+  padding: 34px 0 45px;
+  background: #101210;
+}
+
+#projects.cb-regional .cb-regional-heading {
+  margin: 0 0 28px;
+}
+
+#projects.cb-regional .cb-regional-intro {
+  margin: 0;
+  color: #b9bfba;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#projects.cb-regional .cb-regional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+#projects.cb-regional .cb-region {
+  min-width: 0;
+  border-bottom: 1px solid #343b35;
+}
+
+#projects.cb-regional .cb-region-photo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #1b1f1b;
+}
+
+#projects.cb-regional .cb-region-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+#projects.cb-regional .cb-region-body {
+  padding: 14px 0 18px;
+}
+
+#projects.cb-regional .cb-region-services {
+  margin: 0;
+  color: #e2e5e1;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  #projects.cb-regional .cb-regional-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
