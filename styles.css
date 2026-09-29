@@ -1660,3 +1660,8 @@ h2 {
     padding: 18px 0 22px;
   }
 }
+/* PROJECTS - IMAGES ONLY */
+
+#projects.cb-regional .cb-region {
+  border-bottom: 0;
+}
