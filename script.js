@@ -173,3 +173,122 @@ document.addEventListener("DOMContentLoaded", () => {
     initEnergySliders();
   }
 })();
+/* SLAYTI FAREYLE SURUKLEME */
+
+(() => {
+  function initEnergyMouseDrag() {
+    document.querySelectorAll(
+      "[data-energy-slider] .energy-track"
+    ).forEach((track) => {
+
+      if (track.dataset.mouseDragReady) return;
+      track.dataset.mouseDragReady = "true";
+
+      track.querySelectorAll("img").forEach((image) => {
+        image.draggable = false;
+      });
+
+      track.addEventListener("dragstart", (event) => {
+        event.preventDefault();
+      });
+
+      let drag = null;
+
+      track.addEventListener("pointerdown", (event) => {
+        if (
+          event.pointerType !== "mouse" ||
+          event.button !== 0
+        ) {
+          return;
+        }
+
+        const slide = track.querySelector(".energy-slide");
+        if (!slide) return;
+
+        event.preventDefault();
+        track.focus({ preventScroll: true });
+
+        const width = slide.getBoundingClientRect().width;
+
+        drag = {
+          id: event.pointerId,
+          x: event.clientX,
+          scroll: track.scrollLeft,
+          width,
+          index: Math.round(track.scrollLeft / width),
+          distance: 0
+        };
+
+        track.classList.add("is-dragging");
+        track.setPointerCapture(event.pointerId);
+      });
+
+      track.addEventListener("pointermove", (event) => {
+        if (!drag || event.pointerId !== drag.id) return;
+
+        drag.distance = event.clientX - drag.x;
+        track.scrollLeft = drag.scroll - drag.distance;
+      });
+
+      function finish(event) {
+        if (!drag || event.pointerId !== drag.id) return;
+
+        const saved = drag;
+        drag = null;
+
+        const total =
+          track.querySelectorAll(".energy-slide").length;
+
+        let target = Math.round(
+          track.scrollLeft / saved.width
+        );
+
+        const threshold = Math.min(
+          60,
+          saved.width * 0.15
+        );
+
+        if (
+          event.type === "pointerup" &&
+          Math.abs(saved.distance) > threshold
+        ) {
+          target =
+            saved.index + (saved.distance < 0 ? 1 : -1);
+        }
+
+        target = Math.max(
+          0,
+          Math.min(total - 1, target)
+        );
+
+        track.classList.remove("is-dragging");
+
+        if (track.hasPointerCapture(saved.id)) {
+          track.releasePointerCapture(saved.id);
+        }
+
+        const reducedMotion = matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        track.scrollTo({
+          left: target * saved.width,
+          behavior: reducedMotion ? "instant" : "smooth"
+        });
+      }
+
+      track.addEventListener("pointerup", finish);
+      track.addEventListener("pointercancel", finish);
+      track.addEventListener("lostpointercapture", finish);
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initEnergyMouseDrag
+    );
+  } else {
+    initEnergyMouseDrag();
+  }
+})();
