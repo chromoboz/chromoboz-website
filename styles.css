@@ -1506,3 +1506,157 @@ h2 {
 #about .company-card h2 {
   color: #101210;
 }
+/* THREE REGIONAL PROJECTS */
+
+#projects.cb-regional {
+  display: block;
+  height: auto;
+  min-height: 0;
+  padding: 60px 0;
+  background: #101210;
+  color: #f5f3ed;
+}
+
+#projects.cb-regional .cb-regional-heading {
+  display: block;
+  max-width: 800px;
+  margin: 0 0 32px;
+}
+
+#projects.cb-regional .cb-regional-kicker {
+  margin: 0 0 14px;
+  color: #f2762e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+#projects.cb-regional h2 {
+  margin: 0;
+  color: #f5f3ed;
+  font-size: clamp(30px, 3.4vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+}
+
+#projects.cb-regional .cb-regional-intro {
+  margin: 16px 0 0;
+  color: #b9bfba;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#projects.cb-regional .cb-regional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+
+#projects.cb-regional .cb-region {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-bottom: 1px solid #343b35;
+}
+
+#projects.cb-regional .cb-region-photo {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #1b1f1b;
+}
+
+#projects.cb-regional .cb-region-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  transition: filter 180ms ease;
+}
+
+#projects.cb-regional .cb-region-photo:hover img {
+  filter: brightness(1.08);
+}
+
+#projects.cb-regional .cb-region-photo:focus-visible {
+  outline: 2px solid #f2762e;
+  outline-offset: 4px;
+}
+
+#projects.cb-regional .cb-region-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  background: #f2762e;
+  color: #101210;
+  font-size: 21px;
+}
+
+#projects.cb-regional .cb-region-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 0;
+}
+
+#projects.cb-regional .cb-region-number {
+  margin: 0 0 12px;
+  color: #f2762e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+#projects.cb-regional h3 {
+  margin: 0 0 12px;
+  color: #f5f3ed;
+  font-size: clamp(20px, 1.7vw, 25px);
+  line-height: 1.25;
+}
+
+#projects.cb-regional .cb-region-description {
+  margin: 0 0 20px;
+  color: #b9bfba;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+#projects.cb-regional .cb-region-services {
+  margin: auto 0 0;
+  color: #e2e5e1;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px) {
+  #projects.cb-regional .cb-regional-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  #projects.cb-regional .cb-region {
+    width: 100%;
+    max-width: 620px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #projects.cb-regional {
+    padding: 40px 0;
+  }
+
+  #projects.cb-regional .cb-regional-heading {
+    margin-bottom: 26px;
+  }
+
+  #projects.cb-regional .cb-region-body {
+    padding: 18px 0 22px;
+  }
+}
