@@ -1665,3 +1665,49 @@ h2 {
 #projects.cb-regional .cb-region {
   border-bottom: 0;
 }
+/* PROJECTS - 3 PHOTOS ONLY */
+
+#projects.cb-regional {
+  padding: 60px 0;
+  background: #101210;
+}
+
+#projects.cb-regional .cb-regional-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 26px;
+}
+
+#projects.cb-regional .cb-region {
+  display: block;
+  min-width: 0;
+  border: 0;
+}
+
+#projects.cb-regional .cb-region-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  background: #1b1f1b;
+}
+
+#projects.cb-regional .cb-region-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+#projects.cb-regional .cb-region-arrow {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  #projects.cb-regional .cb-regional-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
