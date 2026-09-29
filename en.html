@@ -9,6 +9,65 @@
 
   <link rel="stylesheet" href="styles.css?v=20260929">
   <script src="script.js?v=20260929" defer></script>
+
+  <style>
+    #presence {
+      background: #101210;
+      color: #f5f3ed;
+      --muted: #a6ada6;
+      --muted-dark: #747b74;
+      --line: #343934;
+    }
+
+    #presence .kicker,
+    #presence .metric strong,
+    #presence .map-header span {
+      color: var(--orange);
+    }
+
+    #presence .metric {
+      background: #171a17;
+    }
+
+    #presence .metric span,
+    #presence .map-locations,
+    #presence .map-locations > span {
+      color: #d2d6d2;
+    }
+
+    #presence .map-card {
+      background: #151815;
+    }
+
+    #presence .map-header h3 {
+      color: #f5f3ed;
+    }
+
+    #about {
+      background: #f2f3f2;
+      color: #1a211e;
+      --muted: #505b55;
+      --line: #d5dbd7;
+    }
+
+    #about .kicker {
+      color: #b94a0e;
+    }
+
+    #about .about-copy h2,
+    #about .inline-link {
+      color: #1a211e;
+    }
+
+    #about .about-copy .lead,
+    #about .about-copy > p:not(.kicker):not(.lead) {
+      color: #505b55;
+    }
+
+    #about .photo-badge {
+      color: #f5f3ed;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,13 +81,8 @@
         <img src="new%20logo.png" alt="ChromoBoz">
       </a>
 
-      <button
-        class="menu-button"
-        type="button"
-        aria-label="Menu"
-        aria-expanded="false">
-        ☰
-      </button>
+      <button class="menu-button" type="button"
+        aria-label="Menu" aria-expanded="false">☰</button>
 
       <nav class="nav">
         <a href="#services">Services</a>
@@ -49,14 +103,11 @@
 
   <main>
 
-    <!-- HERO -->
+    <!-- HOME -->
 
     <section class="hero" id="home">
 
-      <img
-        src="anaicon.png"
-        alt=""
-        class="hero-background"
+      <img src="anaicon.png" alt="" class="hero-background"
         fetchpriority="high">
 
       <div class="hero-shade"></div>
@@ -110,120 +161,138 @@
 
         <div class="service-grid">
 
-          <a
-            href="#contact"
-            class="service-card"
+          <a href="#contact" class="service-card"
             style="--service-image: url('service-paint.webp');">
-
             <div class="service-meta">
-              <span>01</span>
-              <span>↗</span>
+              <span>01</span><span>↗</span>
             </div>
-
-            <h3>
-              Industrial<br>
-              Painting
-            </h3>
-
+            <h3>Industrial<br>Painting</h3>
             <p>
               Protective coating systems for steel structures,
               industrial equipment and facilities.
             </p>
-
             <small>INDUSTRIAL PAINTING</small>
           </a>
 
-          <a
-            href="#contact"
-            class="service-card"
+          <a href="#contact" class="service-card"
             style="--service-image: url('service-blasting.webp');">
-
             <div class="service-meta">
-              <span>02</span>
-              <span>↗</span>
+              <span>02</span><span>↗</span>
             </div>
-
-            <h3>
-              Abrasive<br>
-              Blasting
-            </h3>
-
+            <h3>Abrasive<br>Blasting</h3>
             <p>
               Cleaning and preparation of metal surfaces
               before coating application.
             </p>
-
             <small>ABRASIVE BLASTING</small>
           </a>
 
-          <a
-            href="#contact"
-            class="service-card"
+          <a href="#contact" class="service-card"
             style="--service-image: url('service-maintenance.webp');">
-
             <div class="service-meta">
-              <span>03</span>
-              <span>↗</span>
+              <span>03</span><span>↗</span>
             </div>
-
-            <h3>
-              Metal<br>
-              Maintenance
-            </h3>
-
+            <h3>Metal<br>Maintenance</h3>
             <p>
               Maintenance and protection of metal structures
               and industrial equipment.
             </p>
-
             <small>METAL MAINTENANCE</small>
           </a>
 
-          <a
-            href="#contact"
-            class="service-card"
+          <a href="#contact" class="service-card"
             style="--service-image: url('service-personnel.webp');">
-
             <div class="service-meta">
-              <span>04</span>
-              <span>↗</span>
+              <span>04</span><span>↗</span>
             </div>
-
-            <h3>
-              Skilled<br>
-              Personnel
-            </h3>
-
+            <h3>Skilled<br>Personnel</h3>
             <p>
               Technical and skilled personnel for industrial
               projects, facilities and worksites.
             </p>
-
             <small>SKILLED PERSONNEL</small>
           </a>
 
-          <a
-            href="#contact"
-            class="service-card"
+          <a href="#contact" class="service-card"
             style="--service-image: url('service-wind.webp');">
-
             <div class="service-meta">
-              <span>05</span>
-              <span>↗</span>
+              <span>05</span><span>↗</span>
             </div>
-
-            <h3>
-              Onshore<br>
-              Wind
-            </h3>
-
+            <h3>Onshore<br>Wind</h3>
             <p>
               Access to certified personnel for onshore wind
               turbine and wind energy projects.
             </p>
-
             <small>CERTIFIED WIND PERSONNEL</small>
           </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRESENCE -->
+
+    <section class="presence" id="presence">
+      <div class="shell presence-grid">
+
+        <div class="presence-copy">
+          <p class="kicker">02 / NETWORK &amp; PRESENCE</p>
+
+          <h2>Active workers</h2>
+
+          <div class="metric-grid">
+            <div class="metric">
+              <strong>40+</strong>
+              <span>Active workers</span>
+            </div>
+
+            <div class="metric">
+              <strong>04</strong>
+              <span>Active regions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-card">
+
+          <div class="map-header">
+            <h3>Presence in Greece</h3>
+            <span>ACTIVE PROJECTS</span>
+          </div>
+
+          <div class="map-stage">
+
+            <img src="greece-map-dark.png?v=6"
+              alt="Map of Greece" class="map-image">
+
+            <button class="map-pin" type="button"
+              aria-label="Thessaloniki" style="top:21%; left:38%;">
+              <span></span><b>Thessaloniki</b>
+            </button>
+
+            <button class="map-pin map-pin-bottom" type="button"
+              aria-label="Chalkidiki" style="top:25%; left:41%;">
+              <span></span><b>Chalkidiki</b>
+            </button>
+
+            <button class="map-pin" type="button"
+              aria-label="Kavala" style="top:18%; left:55%;">
+              <span></span><b>Kavala</b>
+            </button>
+
+            <button class="map-pin" type="button"
+              aria-label="Alexandroupoli" style="top:19%; left:71%;">
+              <span></span><b>Alexandroupoli</b>
+            </button>
+
+          </div>
+
+          <div class="map-locations">
+            <span><i></i>Thessaloniki</span>
+            <span><i></i>Chalkidiki</span>
+            <span><i></i>Kavala</span>
+            <span><i></i>Alexandroupoli</span>
+          </div>
 
         </div>
       </div>
@@ -235,10 +304,8 @@
       <div class="shell about-grid">
 
         <div class="about-photo">
-          <img
-            src="plant.webp"
-            alt="ChromoBoz industrial project"
-            loading="lazy">
+          <img src="plant.webp"
+            alt="ChromoBoz industrial project" loading="lazy">
 
           <div class="photo-badge">
             <small>INDUSTRIAL FIELD</small>
@@ -247,8 +314,7 @@
         </div>
 
         <div class="about-copy">
-
-          <p class="kicker">02 / ChromoBoz</p>
+          <p class="kicker">03 / ChromoBoz</p>
 
           <h2>
             In the field.<br>
@@ -271,97 +337,8 @@
           <a href="#contact" class="inline-link">
             Contact us ↗
           </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- PRESENCE -->
-
-    <section class="presence" id="presence">
-      <div class="shell presence-grid">
-
-        <div class="presence-copy">
-
-          <p class="kicker">03 / NETWORK &amp; PRESENCE</p>
-
-          <h2>Active workers</h2>
-
-          <div class="metric-grid">
-
-            <div class="metric">
-              <strong>40+</strong>
-              <span>Active workers</span>
-            </div>
-
-            <div class="metric">
-              <strong>04</strong>
-              <span>Active regions</span>
-            </div>
-
-          </div>
         </div>
 
-        <div class="map-card">
-
-          <div class="map-header">
-            <h3>Presence in Greece</h3>
-            <span>ACTIVE PROJECTS</span>
-          </div>
-
-          <div class="map-stage">
-
-            <img
-              src="greece-map-dark.png?v=6"
-              alt="Map of Greece"
-              class="map-image">
-
-            <button
-              class="map-pin"
-              type="button"
-              aria-label="Thessaloniki"
-              style="top:21%; left:38%;">
-              <span></span>
-              <b>Thessaloniki</b>
-            </button>
-
-            <button
-              class="map-pin map-pin-bottom"
-              type="button"
-              aria-label="Chalkidiki"
-              style="top:25%; left:41%;">
-              <span></span>
-              <b>Chalkidiki</b>
-            </button>
-
-            <button
-              class="map-pin"
-              type="button"
-              aria-label="Kavala"
-              style="top:18%; left:55%;">
-              <span></span>
-              <b>Kavala</b>
-            </button>
-
-            <button
-              class="map-pin"
-              type="button"
-              aria-label="Alexandroupoli"
-              style="top:19%; left:71%;">
-              <span></span>
-              <b>Alexandroupoli</b>
-            </button>
-
-          </div>
-
-          <div class="map-locations">
-            <span><i></i>Thessaloniki</span>
-            <span><i></i>Chalkidiki</span>
-            <span><i></i>Kavala</span>
-            <span><i></i>Alexandroupoli</span>
-          </div>
-
-        </div>
       </div>
     </section>
 
@@ -371,10 +348,8 @@
       <div class="shell">
 
         <div class="section-heading projects-heading">
-
           <div>
             <p class="kicker">04 / PROJECTS &amp; FIELD</p>
-
             <h2>
               Real work.<br>
               Real results.
@@ -382,212 +357,146 @@
           </div>
 
           <p>
-            Selected ChromoBoz work across industrial
-            facilities, steel structures, painting
-            and abrasive blasting.
+            Selected ChromoBoz work across industrial facilities,
+            steel structures, painting and abrasive blasting.
           </p>
-
         </div>
 
         <div class="projects-grid-new">
 
           <article class="project-card-new">
-
-            <a
-              href="project-team-scaffold.jpeg"
+            <a href="project-team-scaffold.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-team-scaffold.jpeg"
-                alt="Skilled personnel"
-                loading="lazy">
-
+              <img src="project-team-scaffold.jpeg"
+                alt="Skilled personnel" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>01</span>
                 <small>SKILLED PERSONNEL</small>
               </div>
-
               <h3>Skilled Personnel</h3>
-
               <p>
                 Technical personnel operating in demanding
                 industrial environments and worksites.
               </p>
-
             </div>
           </article>
 
           <article class="project-card-new">
-
-            <a
-              href="project-before-after.jpeg"
+            <a href="project-before-after.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-before-after.jpeg"
-                alt="Surface protection"
-                loading="lazy">
-
+              <img src="project-before-after.jpeg"
+                alt="Surface protection" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>02</span>
                 <small>SURFACE PROTECTION</small>
               </div>
-
               <h3>Steel Surface Protection</h3>
-
               <p>
                 Surface preparation and application of
                 protective coating systems.
               </p>
-
             </div>
           </article>
 
           <article class="project-card-new">
-
-            <a
-              href="project-steel-structure.jpeg"
+            <a href="project-steel-structure.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-steel-structure.jpeg"
-                alt="Steel structures"
-                loading="lazy">
-
+              <img src="project-steel-structure.jpeg"
+                alt="Steel structures" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>03</span>
                 <small>STEEL STRUCTURES</small>
               </div>
-
               <h3>Steel Structures</h3>
-
               <p>
                 Protection and maintenance of industrial
                 steel structures.
               </p>
-
             </div>
           </article>
 
           <article class="project-card-new">
-
-            <a
-              href="project-industrial-painting.jpeg"
+            <a href="project-industrial-painting.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-industrial-painting.jpeg"
-                alt="Industrial painting"
-                loading="lazy">
-
+              <img src="project-industrial-painting.jpeg"
+                alt="Industrial painting" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>04</span>
                 <small>INDUSTRIAL PAINTING</small>
               </div>
-
               <h3>Industrial Painting</h3>
-
               <p>
                 Painting and protection of metal components
                 for industrial use.
               </p>
-
             </div>
           </article>
 
           <article class="project-card-new">
-
-            <a
-              href="project-blasting.jpeg"
+            <a href="project-blasting.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-blasting.jpeg"
-                alt="Abrasive blasting"
-                loading="lazy">
-
+              <img src="project-blasting.jpeg"
+                alt="Abrasive blasting" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>05</span>
                 <small>ABRASIVE BLASTING</small>
               </div>
-
               <h3>Abrasive Blasting</h3>
-
               <p>
                 Preparation of metal surfaces and
                 industrial equipment.
               </p>
-
             </div>
           </article>
 
           <article class="project-card-new">
-
-            <a
-              href="project-industrial-facility.jpeg"
+            <a href="project-industrial-facility.jpeg"
               class="gallery-link project-photo-new">
-
-              <img
-                src="project-industrial-facility.jpeg"
-                alt="Industrial facilities"
-                loading="lazy">
-
+              <img src="project-industrial-facility.jpeg"
+                alt="Industrial facilities" loading="lazy">
               <span class="project-arrow-new">↗</span>
             </a>
 
             <div class="project-content-new">
-
               <div class="project-topline-new">
                 <span>06</span>
                 <small>INDUSTRIAL FACILITIES</small>
               </div>
-
               <h3>Industrial Facilities</h3>
-
               <p>
                 Work carried out in large-scale
                 industrial facilities.
               </p>
-
             </div>
           </article>
 
         </div>
 
         <div class="capabilities-strip">
-          <span>INDUSTRIAL COATING</span>
-          <i></i>
-          <span>ABRASIVE BLASTING</span>
-          <i></i>
-          <span>METAL MAINTENANCE</span>
-          <i></i>
-          <span>SKILLED PERSONNEL</span>
-          <i></i>
+          <span>INDUSTRIAL COATING</span><i></i>
+          <span>ABRASIVE BLASTING</span><i></i>
+          <span>METAL MAINTENANCE</span><i></i>
+          <span>SKILLED PERSONNEL</span><i></i>
           <span>ONSHORE WIND</span>
         </div>
 
@@ -601,7 +510,6 @@
 
         <div>
           <p class="kicker contact-kicker">TALK TO US</p>
-
           <h2>
             Have a project?<br>
             Let's discuss it.
@@ -639,9 +547,7 @@
   <section class="energy-projects-section">
     <div class="shell">
       <div class="energy-projects-banner">
-        <img
-          src="energa-erga.png"
-          alt="ChromoBoz active projects">
+        <img src="energa-erga.png" alt="ChromoBoz active projects">
       </div>
     </div>
   </section>
@@ -652,109 +558,68 @@
     <div class="shell footer-grid">
 
       <div class="footer-brand">
-
         <div class="footer-logo-frame">
           <img src="new%20logo.png" alt="ChromoBoz">
         </div>
-
         <p>
           Industrial coating, blasting, maintenance,
           skilled personnel &amp; onshore wind staffing.
         </p>
-
       </div>
 
       <div class="footer-column">
-
         <strong>Services</strong>
-
         <a href="#services">Industrial Painting</a>
         <a href="#services">Abrasive Blasting</a>
         <a href="#services">Metal Maintenance</a>
         <a href="#services">Skilled Personnel</a>
         <a href="#services">Onshore Wind</a>
-
       </div>
 
       <div class="footer-column footer-company">
-
         <strong>Company</strong>
-
         <a href="#about">ChromoBoz</a>
         <a href="#presence">Network &amp; Presence</a>
         <a href="#projects">Projects</a>
 
         <div class="footer-socials">
 
-          <a
-            href="https://www.instagram.com/ChromoBoz?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw=="
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://www.instagram.com/ChromoBoz?utm_source=ig_web_button_share_sheet&amp;stkn=ZDNlZDc0MzIxNw=="
+            target="_blank" rel="noopener noreferrer"
             class="footer-social-link">
-
             <img src="instagram-icon.png" alt="Instagram">
             <span>Instagram</span>
-
           </a>
 
-          <a
-            href="https://www.linkedin.com/company/ChromoBoz/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/company/ChromoBoz/"
+            target="_blank" rel="noopener noreferrer"
             class="footer-social-link">
-
             <img src="linkedin-icon.png" alt="LinkedIn">
             <span>ChromoBoz</span>
-
           </a>
 
         </div>
       </div>
 
       <div class="footer-column footer-contact">
-
         <strong>Contact</strong>
-
-        <a href="tel:+306971650427">
-          +30 697 1650 427
-        </a>
-
-        <a href="tel:+302541070034">
-          +30 25410 70034
-        </a>
-
-        <a href="mailto:info@chromoboz.com">
-          info@chromoboz.com
-        </a>
-
+        <a href="tel:+306971650427">+30 697 1650 427</a>
+        <a href="tel:+302541070034">+30 25410 70034</a>
+        <a href="mailto:info@chromoboz.com">info@chromoboz.com</a>
       </div>
 
     </div>
 
     <div class="shell footer-bottom">
-
-      <span>
-        © <span id="year">2026</span> ChromoBoz
-      </span>
-
+      <span>© <span id="year">2026</span> ChromoBoz</span>
       <a href="#home">BACK TO TOP ↑</a>
-
     </div>
   </footer>
 
-  <!-- LIGHTBOX -->
-
   <dialog id="lightbox">
-
-    <button
-      class="lightbox-close"
-      type="button"
-      aria-label="Close">
-      ×
-    </button>
-
+    <button class="lightbox-close" type="button"
+      aria-label="Close">×</button>
     <img alt="">
-
   </dialog>
 
 </body>
