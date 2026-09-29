@@ -1497,3 +1497,12 @@ h2 {
 }
 
 /* DOSYA SONU */
+/* Iletisim basligi: turuncu */
+#contact h2 {
+  color: #f2762e;
+}
+
+/* Sirket basligi: siyah */
+#about .company-card h2 {
+  color: #101210;
+}
