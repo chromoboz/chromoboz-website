@@ -1665,3 +1665,24 @@ h2 {
     letter-spacing: 3px;
   }
 }
+* SLAYTI FAREYLE SURUKLEME */
+
+.energy-track {
+  cursor: grab;
+}
+
+.energy-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.energy-track,
+.energy-track * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.energy-track img {
+  -webkit-user-drag: none;
+}
