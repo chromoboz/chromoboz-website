@@ -1466,3 +1466,66 @@ h2 {
     scroll-behavior: auto;
   }
 }
+/* HARITA: SIYAH ARKA PLAN */
+
+#presence {
+  background: #101210;
+  color: #f5f3ed;
+  --muted: #a6ada6;
+  --muted-dark: #747b74;
+  --line: #343934;
+}
+
+#presence .kicker,
+#presence .metric strong,
+#presence .map-header span {
+  color: var(--orange);
+}
+
+#presence .metric {
+  background: #171a17;
+}
+
+#presence .metric span,
+#presence .map-locations,
+#presence .map-locations > span {
+  color: #d2d6d2;
+}
+
+#presence .map-card {
+  background: #151815;
+}
+
+#presence .map-header h3 {
+  color: #f5f3ed;
+}
+
+/* FABRIKA BOLUMU: BEYAZA YAKIN GRI */
+
+#about {
+  background: #f2f3f2;
+  color: #1a211e;
+  --muted: #505b55;
+  --line: #d5dbd7;
+}
+
+#about .kicker {
+  color: #b94a0e;
+}
+
+#about .about-copy h2 {
+  color: #1a211e;
+}
+
+#about .about-copy .lead,
+#about .about-copy > p:not(.kicker):not(.lead) {
+  color: #505b55;
+}
+
+#about .inline-link {
+  color: #1a211e;
+}
+
+#about .photo-badge {
+  color: #f5f3ed;
+}
