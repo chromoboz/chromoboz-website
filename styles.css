@@ -1829,3 +1829,39 @@ h2 {
     text-align: center;
   }
 }
+/* AKTIF PROJELER: DAHA KUCUK SLAYT */
+
+.energy-projects-section {
+  padding: 28px 0 20px;
+}
+
+.energy-slider {
+  width: min(72%, 600px);
+}
+
+.energy-title {
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.energy-slide figcaption {
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.energy-controls {
+  margin-top: 12px;
+  gap: 20px;
+}
+
+.energy-controls button {
+  width: 40px;
+  height: 36px;
+  font-size: 21px;
+}
+
+@media (max-width: 760px) {
+  .energy-slider {
+    width: 84%;
+  }
+}
