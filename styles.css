@@ -1792,10 +1792,10 @@ h2 {
 
 @media (max-width: 760px) {
   #projects.sinergasia-section {
-    padding: 22px 0 24px;
+    padding: 18px 0;
   }
 
   #projects.sinergasia-section .sinergasia-container {
-    width: 96%;
+    width: 94%;
   }
 }
