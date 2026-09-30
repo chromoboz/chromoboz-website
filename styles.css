@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* =========================================================
-   CHROMOBOZ — CLEAN STYLES
+   CHROMOBOZ - CLEAN STYLESHEET
    ========================================================= */
 
 :root {
@@ -24,6 +24,10 @@
 
   --max: 1500px;
 }
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -90,7 +94,6 @@ h2 {
   font-weight: 800;
 }
 
-
 /* =========================================================
    HEADER
    ========================================================= */
@@ -130,8 +133,9 @@ h2 {
   mix-blend-mode: lighten;
 }
 
-
-/* NAV */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 .nav {
   display: flex;
@@ -182,8 +186,9 @@ h2 {
   cursor: pointer;
 }
 
-
-/* LANGUAGE */
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
 
 .language-switcher {
   display: flex;
@@ -207,7 +212,6 @@ h2 {
 .language-switcher span {
   color: #4c514c;
 }
-
 
 /* =========================================================
    HERO
@@ -236,13 +240,13 @@ h2 {
   background:
     linear-gradient(
       90deg,
-      rgba(5,8,8,.78),
-      rgba(5,8,8,.50) 45%,
-      rgba(5,8,8,.08)
+      rgba(5, 8, 8, .80),
+      rgba(5, 8, 8, .52) 46%,
+      rgba(5, 8, 8, .08)
     ),
     linear-gradient(
       0deg,
-      rgba(0,0,0,.28),
+      rgba(0, 0, 0, .30),
       transparent 45%
     );
 }
@@ -259,7 +263,7 @@ h2 {
 }
 
 .hero-copy {
-  max-width: 960px;
+  max-width: 980px;
 }
 
 .hero-copy .kicker {
@@ -281,6 +285,7 @@ h2 {
 
 .hero h1 {
   margin: 0;
+  max-width: 980px;
   color: #fff;
   font-size: clamp(40px, 4.6vw, 74px);
   line-height: 1.08;
@@ -289,7 +294,7 @@ h2 {
 }
 
 .hero-text {
-  max-width: 570px;
+  max-width: 690px;
   margin: 24px 0 0;
   color: #e6e9e7;
   font-size: 17px;
@@ -327,7 +332,6 @@ h2 {
   background: var(--orange-light);
 }
 
-
 /* =========================================================
    SERVICES
    ========================================================= */
@@ -336,6 +340,7 @@ h2 {
   padding: 60px 0;
   background: #f2f3f2;
   color: #1a211e;
+
   --muted: #505b55;
   --muted-dark: #59635e;
   --line: #d5dbd7;
@@ -382,6 +387,7 @@ h2 {
   overflow: hidden;
   isolation: isolate;
   background: #f8f9f8;
+  cursor: pointer;
   transition: transform .3s ease, background .3s ease;
 }
 
@@ -476,7 +482,6 @@ h2 {
   color: #fff;
 }
 
-
 /* =========================================================
    PRESENCE
    ========================================================= */
@@ -536,8 +541,9 @@ h2 {
   font-size: 13px;
 }
 
-
-/* MAP */
+/* =========================================================
+   MAP
+   ========================================================= */
 
 #presence .map-card {
   width: 100%;
@@ -588,9 +594,6 @@ h2 {
   object-position: center;
   pointer-events: none;
 }
-
-
-/* PINS */
 
 .map-pin {
   width: 20px;
@@ -645,9 +648,6 @@ h2 {
   bottom: auto;
 }
 
-
-/* 3 REGIONS */
-
 #presence .map-locations {
   margin-top: 12px;
   display: grid !important;
@@ -680,7 +680,6 @@ h2 {
   border-radius: 50%;
   background: var(--orange);
 }
-
 
 /* =========================================================
    COMPANY
@@ -768,32 +767,42 @@ h2 {
   filter: grayscale(100%);
 }
 
-
-/* BU OK ARTIK HIC GORUNMEYECEK */
+/* DEV OK TAMAMEN KAPALI */
 
 .company-arrow {
   display: none !important;
 }
-
 
 /* =========================================================
    ACTIVE PROJECTS / PARTNERSHIPS
    ========================================================= */
 
 .partnership-projects {
-  padding: 42px 0 48px;
-  background: #101210;
+  position: relative;
+  padding: 30px 0 34px;
   color: #f5f3ed;
+
+  background:
+    linear-gradient(
+      rgba(5, 10, 9, .78),
+      rgba(5, 10, 9, .84)
+    ),
+    url("projects-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .partnership-shell {
-  width: min(90%, 1500px);
+  width: min(76%, 1180px);
+  margin-inline: auto;
 }
 
 .partnership-kicker {
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   color: var(--orange);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 900;
   letter-spacing: 2px;
 }
@@ -801,25 +810,23 @@ h2 {
 .partnership-list {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 }
 
-
-/* CARD */
+/* PROJECT CARD */
 
 .partnership-card {
   display: grid;
   grid-template-columns: 50% 50%;
-
-  min-height: 320px;
-
+  min-height: 210px;
   overflow: hidden;
 
-  background: #0b100e;
-  border: 1px solid #303730;
-  border-radius: 8px;
-}
+  background: rgba(8, 15, 13, .93);
+  backdrop-filter: blur(2px);
 
+  border: 1px solid #303730;
+  border-radius: 6px;
+}
 
 /* PHOTO */
 
@@ -831,54 +838,53 @@ h2 {
 }
 
 .partnership-photo img {
+  display: block;
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
 }
 
+/* UST FOTO */
 
-/* RIGHT INFO PANEL */
+.partnership-card:first-child .partnership-photo img {
+  object-position: center center;
+}
+
+/* ALT FOTO - BEYAZ KISMI KES */
+
+.partnership-card:nth-child(2) .partnership-photo img {
+  object-position: center top;
+  transform: scale(1.07);
+}
+
+/* INFO PANEL */
 
 .partnership-info {
-  position: relative;
-
-  padding: 32px 34px;
+  min-width: 0;
+  padding: 18px 22px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  overflow: hidden;
-
   background:
-    radial-gradient(
-      circle at 90% 50%,
-      rgba(255,255,255,.055),
-      transparent 42%
-    ),
     linear-gradient(
       90deg,
-      #08100e,
-      #111815
+      rgba(5, 14, 12, .94),
+      rgba(10, 18, 15, .86)
     );
 }
-
-
-/* TOP AREA */
 
 .partnership-top {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  gap: 30px;
-
-  align-items: end;
+  gap: 18px;
+  align-items: center;
 }
 
 .partnership-top-tcp {
-  grid-template-columns: 1.1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .partner-company {
@@ -886,50 +892,45 @@ h2 {
 }
 
 .partner-label {
-  margin: 0 0 10px;
-
+  margin: 0 0 8px;
   color: #e1e5e2;
-
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 2.4px;
+  letter-spacing: 1.8px;
 }
 
-
-/* LOGO */
+/* LOGOS */
 
 .partner-logo {
   width: 100%;
-  max-width: 245px;
-  min-height: 68px;
+  max-width: 205px;
+  min-height: 56px;
 
-  padding: 9px 16px;
+  padding: 7px 12px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: #fff;
-
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .partner-logo img {
-  width: 100%;
-  max-height: 55px;
-
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 40px;
   object-fit: contain;
 }
-
 
 /* PROJECT LOCATION */
 
 .project-location {
   min-width: 0;
-
-  padding-left: 24px;
-
-  border-left: 1px solid #8f9791;
+  padding-left: 16px;
+  border-left: 1px solid #858c87;
 }
 
 .project-location strong,
@@ -939,280 +940,50 @@ h2 {
 }
 
 .project-location strong {
-  margin-bottom: 3px;
-
+  margin-bottom: 2px;
   color: #f5f3ed;
-
-  font-size: 17px;
-  line-height: 1.25;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .project-location span {
   color: #e3e6e4;
-
-  font-size: 17px;
-  line-height: 1.35;
+  font-size: 13px;
+  line-height: 1.3;
 }
 
 .project-location b {
   margin-top: 2px;
-
   color: var(--orange);
-
-  font-size: 18px;
-  line-height: 1.25;
+  font-size: 14px;
+  line-height: 1.2;
 }
-
 
 /* DIVIDER */
 
 .partnership-divider {
   width: 100%;
   height: 1px;
-
-  margin: 24px 0 18px;
-
-  background: #7a817c;
+  margin: 14px 0 12px;
+  background: #777f79;
 }
 
-
-/* OUR INVOLVEMENT */
+/* ROLE */
 
 .partnership-role strong {
   display: block;
-
-  margin-bottom: 5px;
-
+  margin-bottom: 4px;
   color: #fff;
-
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.2;
 }
 
 .partnership-role p {
   margin: 0;
-
   color: #dde1de;
-
-  font-size: 15px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.45;
 }
-
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
-@media (max-width: 1050px) {
-
-  .partnership-shell {
-    width: 94%;
-  }
-
-  .partnership-card {
-    grid-template-columns: 48% 52%;
-  }
-
-  .partnership-info {
-    padding: 25px;
-  }
-
-  .partnership-top {
-    gap: 18px;
-  }
-
-  .partnership-top-tcp {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .partnership-top-tcp .project-location:last-child {
-    grid-column: 2;
-  }
-
-  .project-location {
-    padding-left: 16px;
-  }
-
-  .project-location strong,
-  .project-location span {
-    font-size: 14px;
-  }
-
-  .project-location b {
-    font-size: 15px;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 760px) {
-
-  .partnership-projects {
-    padding: 28px 0 32px;
-  }
-
-  .partnership-shell {
-    width: 94%;
-  }
-
-  .partnership-kicker {
-    margin-bottom: 14px;
-    font-size: 10px;
-  }
-
-
-  /*
-     Kart yine masaüstündeki gibi:
-     FOTO SOLDA / YAZI SAGDA
-  */
-
-  .partnership-card {
-    grid-template-columns: 48% 52%;
-
-    min-height: 230px;
-
-    border-radius: 5px;
-  }
-
-
-  .partnership-photo img {
-    object-position: center;
-  }
-
-
-  .partnership-info {
-    padding: 13px 12px;
-  }
-
-
-  .partner-label {
-    margin-bottom: 6px;
-
-    font-size: 7px;
-    letter-spacing: 1px;
-  }
-
-
-  .partner-logo {
-    min-height: 40px;
-
-    padding: 5px 8px;
-
-    border-radius: 4px;
-  }
-
-
-  .partner-logo img {
-    max-height: 31px;
-  }
-
-
-  .partnership-top {
-    grid-template-columns: 1fr 1fr;
-
-    gap: 7px;
-
-    align-items: start;
-  }
-
-
-  .partnership-top-tcp {
-    grid-template-columns: 1fr 1fr;
-  }
-
-
-  .partnership-top-tcp .partner-company {
-    grid-column: 1 / -1;
-  }
-
-
-  .partnership-top-tcp .project-location:last-child {
-    grid-column: auto;
-  }
-
-
-  .project-location {
-    padding-left: 7px;
-  }
-
-
-  .project-location strong {
-    font-size: 8px;
-  }
-
-
-  .project-location span {
-    font-size: 8px;
-  }
-
-
-  .project-location b {
-    font-size: 9px;
-  }
-
-
-  .partnership-divider {
-    margin: 10px 0 8px;
-  }
-
-
-  .partnership-role strong {
-    margin-bottom: 3px;
-
-    font-size: 10px;
-  }
-
-
-  .partnership-role p {
-    font-size: 8px;
-    line-height: 1.4;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONE
-   ========================================================= */
-
-@media (max-width: 430px) {
-
-  .partnership-card {
-    grid-template-columns: 46% 54%;
-  }
-
-  .partnership-info {
-    padding: 10px 9px;
-  }
-
-  .partner-logo {
-    min-height: 34px;
-  }
-
-  .partner-logo img {
-    max-height: 27px;
-  }
-
-  .project-location strong,
-  .project-location span {
-    font-size: 7px;
-  }
-
-  .project-location b {
-    font-size: 8px;
-  }
-
-  .partnership-role strong {
-    font-size: 9px;
-  }
-
-  .partnership-role p {
-    font-size: 7px;
-  }
-}
-
 
 /* =========================================================
    CONTACT
@@ -1264,6 +1035,7 @@ h2 {
 .contact-links small {
   font-size: 7px;
   font-weight: 900;
+  letter-spacing: .4px;
 }
 
 .contact-links strong {
@@ -1279,7 +1051,6 @@ h2 {
   transform: translateY(-50%);
   font-size: 19px;
 }
-
 
 /* =========================================================
    FOOTER
@@ -1335,6 +1106,7 @@ h2 {
 .footer-column > a {
   color: #838a83;
   font-size: 12px;
+  transition: color .2s ease;
 }
 
 .footer-column > a:hover {
@@ -1375,7 +1147,6 @@ h2 {
   font-size: 10px;
 }
 
-
 /* =========================================================
    LIGHTBOX
    ========================================================= */
@@ -1410,16 +1181,12 @@ h2 {
   cursor: pointer;
 }
 
-
-/* =========================================================
-   COOKIE
-   ========================================================= */
+/* COOKIE */
 
 #cb-cookie-panel h2 {
   letter-spacing: normal;
   word-spacing: normal;
 }
-
 
 /* =========================================================
    TABLET
@@ -1438,12 +1205,51 @@ h2 {
   .footer-grid {
     gap: 35px;
   }
-
-  #projects.sinergasia-section .sinergasia-container {
-    width: 84%;
-  }
 }
 
+@media (max-width: 1050px) {
+
+  .partnership-shell {
+    width: 88%;
+  }
+
+  .partnership-card {
+    min-height: 190px;
+  }
+
+  .partnership-info {
+    padding: 16px 18px;
+  }
+
+  .partnership-top {
+    gap: 12px;
+  }
+
+  .partnership-top-tcp {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .partnership-top-tcp .partner-company {
+    grid-column: 1 / -1;
+  }
+
+  .project-location {
+    padding-left: 12px;
+  }
+
+  .project-location strong,
+  .project-location span {
+    font-size: 11px;
+  }
+
+  .project-location b {
+    font-size: 12px;
+  }
+
+  .partnership-role p {
+    font-size: 11px;
+  }
+}
 
 /* =========================================================
    MOBILE
@@ -1454,7 +1260,6 @@ h2 {
   .shell {
     width: 88%;
   }
-
 
   /* HEADER */
 
@@ -1505,7 +1310,6 @@ h2 {
     padding: 13px 0;
   }
 
-
   /* HERO */
 
   .hero,
@@ -1519,7 +1323,8 @@ h2 {
   }
 
   .hero h1 {
-    font-size: clamp(34px, 7.5vw, 50px);
+    font-size: clamp(32px, 7vw, 46px);
+    letter-spacing: -1px;
   }
 
   .hero-background {
@@ -1527,11 +1332,11 @@ h2 {
   }
 
   .hero-text {
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.6;
   }
 
-
-  /* SERVICES — FOTOLAR HER ZAMAN ACIK */
+  /* SERVICES */
 
   #services {
     padding: 34px 0;
@@ -1555,6 +1360,8 @@ h2 {
     background: #151815;
     color: #fff;
   }
+
+  /* TELEFONDA FOTOLAR HEP ACIK */
 
   .service-card::before {
     opacity: 1;
@@ -1596,7 +1403,6 @@ h2 {
   .service-card small {
     color: #e2e5e1;
   }
-
 
   /* PRESENCE */
 
@@ -1644,8 +1450,7 @@ h2 {
     font-size: 8px;
   }
 
-
-  /* COMPANY — MASAUSTU GIBI YAN YANA */
+  /* COMPANY - YAN YANA KALSIN */
 
   #about.company-section {
     padding: 46px 0;
@@ -1692,345 +1497,16 @@ h2 {
     min-height: 100%;
   }
 
-  #about .company-image img {
-    object-position: center;
-  }
-
   .company-arrow {
     display: none !important;
   }
 
+  /* PROJECTS */
 
-  /* ACTIVE PROJECTS */
-
-  #projects.sinergasia-section {
-    padding: 22px 0 24px;
-  }
-
-  #projects.sinergasia-section .sinergasia-container {
-    width: 94%;
-  }
-
-  .sinergasia-kicker {
-    margin-bottom: 12px;
-    font-size: 10px;
-  }
-
-
-  /* CONTACT */
-
-  #contact {
-    padding: 32px 0;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  #contact h2 {
-    font-size: 42px;
-  }
-
-
-  /* FOOTER */
-
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 45px 28px;
-  }
-
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-  }
-}
-
-
-/* =========================================================
-   SMALL PHONE
-   ========================================================= */
-
-@media (max-width: 430px) {
-
-  #about .company-card {
-    padding: 15px 12px;
-  }
-
-  #about .company-card h2 {
-    font-size: 23px;
-  }
-
-  #about .company-card > p:not(.company-label) {
-    font-size: 10px;
-    line-height: 1.45;
-  }
-
-  #about .company-button {
-    font-size: 9px;
-  }
-
-  #contact h2 {
-    font-size: 36px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-  }
-}
-/* =========================================================
-   ACTIVE PROJECTS / PARTNERSHIPS
-   ========================================================= */
-
-.partnership-projects {
-  padding: 26px 0 30px;
-  background: #101210;
-  color: #f5f3ed;
-}
-
-.partnership-shell {
-  width: min(76%, 1180px);
-  margin-inline: auto;
-}
-
-.partnership-kicker {
-  margin: 0 0 14px;
-  color: #f2762e;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-
-.partnership-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.partnership-card {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  min-height: 210px;
-  overflow: hidden;
-  background: #0b100e;
-  border: 1px solid #303730;
-  border-radius: 6px;
-}
-
-.partnership-photo {
-  position: relative;
-  min-width: 0;
-  overflow: hidden;
-  background: #111;
-}
-
-.partnership-photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* UST FOTO */
-.partnership-card:first-child .partnership-photo img {
-  object-position: center center;
-}
-
-/* ALT FOTO - alttaki beyazligi crop et */
-.partnership-card:nth-child(2) .partnership-photo img {
-  object-position: center top;
-  transform: scale(1.06);
-}
-
-.partnership-info {
-  padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  background:
-    radial-gradient(
-      circle at 90% 50%,
-      rgba(255,255,255,.05),
-      transparent 45%
-    ),
-    linear-gradient(90deg, #08100e, #111815);
-}
-
-.partnership-top {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  align-items: center;
-}
-
-.partnership-top-tcp {
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.partner-company {
-  min-width: 0;
-}
-
-.partner-label {
-  margin: 0 0 8px;
-  color: #e1e5e2;
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1.8px;
-}
-
-.partner-logo {
-  width: 100%;
-  max-width: 205px;
-  min-height: 56px;
-  padding: 7px 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 5px;
-}
-
-.partner-logo img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 40px;
-  object-fit: contain;
-}
-
-.project-location {
-  min-width: 0;
-  padding-left: 16px;
-  border-left: 1px solid #858c87;
-}
-
-.project-location strong,
-.project-location span,
-.project-location b {
-  display: block;
-}
-
-.project-location strong {
-  margin-bottom: 2px;
-  color: #f5f3ed;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-.project-location span {
-  color: #e3e6e4;
-  font-size: 13px;
-  line-height: 1.3;
-}
-
-.project-location b {
-  margin-top: 2px;
-  color: #f2762e;
-  font-size: 14px;
-  line-height: 1.2;
-}
-
-.partnership-divider {
-  width: 100%;
-  height: 1px;
-  margin: 14px 0 12px;
-  background: #777f79;
-}
-
-.partnership-role strong {
-  display: block;
-  margin-bottom: 4px;
-  color: #fff;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-.partnership-role p {
-  margin: 0;
-  color: #dde1de;
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-
-/* TABLET */
-
-@media (max-width: 1050px) {
-  .partnership-shell {
-    width: 88%;
-  }
-
-  .partnership-card {
-    min-height: 190px;
-  }
-
-  .partnership-info {
-    padding: 16px 18px;
-  }
-
-  .partnership-top {
-    gap: 12px;
-  }
-
-  .partnership-top-tcp {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .partnership-top-tcp .partner-company {
-    grid-column: 1 / -1;
-  }
-
-  .project-location {
-    padding-left: 12px;
-  }
-
-  .project-location strong,
-  .project-location span {
-    font-size: 11px;
-  }
-
-  .project-location b {
-    font-size: 12px;
-  }
-
-  .partnership-role p {
-    font-size: 11px;
-  }
-}
-
-
-/* MOBILE */
-
-@media (max-width: 760px) {
   .partnership-projects {
     padding: 22px 0 24px;
+    background-position: center;
+    background-size: cover;
   }
 
   .partnership-shell {
@@ -2108,120 +1584,85 @@ h2 {
     font-size: 7px;
     line-height: 1.3;
   }
-}
 
-/* TABLET */
+  /* CONTACT */
 
-@media (max-width: 1050px) {
-
-  .partnership-shell {
-    width: 94%;
+  #contact {
+    padding: 32px 0;
   }
 
-  .partnership-info {
-    padding: 22px;
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
   }
 
-  .partnership-top {
-    gap: 15px;
+  #contact h2 {
+    font-size: 42px;
   }
 
-  .project-location {
-    padding-left: 14px;
-  }
+  /* FOOTER */
 
-  .project-location strong,
-  .project-location span {
-    font-size: 14px;
-  }
-
-  .project-location b {
-    font-size: 15px;
-  }
-}
-
-
-/* MOBILE */
-
-@media (max-width: 760px) {
-
-  .partnership-projects {
-    padding: 28px 0 32px;
-  }
-
-  .partnership-shell {
-    width: 94%;
-  }
-
-  .partnership-kicker {
-    margin-bottom: 13px;
-    font-size: 10px;
-  }
-
-  .partnership-card {
-    grid-template-columns: 48% 52%;
-    min-height: 220px;
-    border-radius: 5px;
-  }
-
-  .partnership-info {
-    padding: 11px 10px;
-  }
-
-  .partner-label {
-    margin-bottom: 5px;
-    font-size: 7px;
-    letter-spacing: .8px;
-  }
-
-  .partner-logo {
-    min-height: 38px;
-    padding: 4px 7px;
-    border-radius: 4px;
-  }
-
-  .partner-logo img {
-    max-height: 29px;
-  }
-
-  .partnership-top {
+  .footer-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    align-items: start;
+    gap: 45px 28px;
   }
 
-  .partnership-top-tcp {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .partnership-top-tcp .partner-company {
+  .footer-brand {
     grid-column: 1 / -1;
   }
 
-  .project-location {
-    padding-left: 6px;
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+  #about .company-card {
+    padding: 15px 12px;
   }
 
-  .project-location strong,
-  .project-location span {
-    font-size: 8px;
+  #about .company-card h2 {
+    font-size: 23px;
   }
 
-  .project-location b {
+  #about .company-card > p:not(.company-label) {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  #about .company-button {
     font-size: 9px;
   }
 
-  .partnership-divider {
-    margin: 9px 0 7px;
+  #contact h2 {
+    font-size: 36px;
   }
 
-  .partnership-role strong {
-    margin-bottom: 2px;
-    font-size: 10px;
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
   }
 
-  .partnership-role p {
-    font-size: 8px;
-    line-height: 1.35;
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
   }
 }
