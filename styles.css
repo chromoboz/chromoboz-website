@@ -1652,3 +1652,6 @@ h2 {
     animation-duration: .01ms !important;
   }
 }
+.service-card:nth-child(5)::before {
+  background-position: center center;
+}
