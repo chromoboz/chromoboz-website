@@ -713,7 +713,7 @@ h2 {
 
 .company-card .company-label {
   margin: 0 0 22px;
-  color: #646b66;
+  color: var(--orange);
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
