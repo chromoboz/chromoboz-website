@@ -767,8 +767,6 @@ h2 {
   filter: grayscale(100%);
 }
 
-/* DEV OK TAMAMEN KAPALI */
-
 .company-arrow {
   display: none !important;
 }
@@ -813,8 +811,6 @@ h2 {
   gap: 10px;
 }
 
-/* PROJECT CARD */
-
 .partnership-card {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -827,8 +823,6 @@ h2 {
   border: 1px solid #303730;
   border-radius: 6px;
 }
-
-/* PHOTO */
 
 .partnership-photo {
   position: relative;
@@ -845,20 +839,14 @@ h2 {
   object-position: center;
 }
 
-/* UST FOTO */
-
 .partnership-card:first-child .partnership-photo img {
   object-position: center center;
 }
-
-/* ALT FOTO - BEYAZ KISMI KES */
 
 .partnership-card:nth-child(2) .partnership-photo img {
   object-position: center top;
   transform: scale(1.07);
 }
-
-/* INFO PANEL */
 
 .partnership-info {
   min-width: 0;
@@ -899,8 +887,6 @@ h2 {
   letter-spacing: 1.8px;
 }
 
-/* LOGOS */
-
 .partner-logo {
   width: 100%;
   max-width: 205px;
@@ -924,8 +910,6 @@ h2 {
   max-height: 40px;
   object-fit: contain;
 }
-
-/* PROJECT LOCATION */
 
 .project-location {
   min-width: 0;
@@ -959,16 +943,12 @@ h2 {
   line-height: 1.2;
 }
 
-/* DIVIDER */
-
 .partnership-divider {
   width: 100%;
   height: 1px;
   margin: 14px 0 12px;
   background: #777f79;
 }
-
-/* ROLE */
 
 .partnership-role strong {
   display: block;
@@ -1361,8 +1341,6 @@ h2 {
     color: #fff;
   }
 
-  /* TELEFONDA FOTOLAR HEP ACIK */
-
   .service-card::before {
     opacity: 1;
     transform: scale(1);
@@ -1402,6 +1380,18 @@ h2 {
 
   .service-card small {
     color: #e2e5e1;
+  }
+
+  /* SADECE TELEFONDA KUCUK OKLARI KALDIR */
+
+  .service-meta span:last-child,
+  .contact-links a > span,
+  .company-arrow {
+    display: none !important;
+  }
+
+  .contact-links a {
+    padding-right: 0 !important;
   }
 
   /* PRESENCE */
@@ -1450,7 +1440,7 @@ h2 {
     font-size: 8px;
   }
 
-  /* COMPANY - YAN YANA KALSIN */
+  /* COMPANY */
 
   #about.company-section {
     padding: 46px 0;
@@ -1495,10 +1485,6 @@ h2 {
 
   #about .company-image {
     min-height: 100%;
-  }
-
-  .company-arrow {
-    display: none !important;
   }
 
   /* PROJECTS */
