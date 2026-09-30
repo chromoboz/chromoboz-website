@@ -1540,13 +1540,13 @@ p {
   }
 
   .logo {
-    width: 145px;
-    height: 76px;
-  }
+  width: 170px;
+  height: 84px;
+}
 
-  .logo img {
-    width: 250px;
-  }
+.logo img {
+  width: 180px;
+}
 
   .menu-button {
     display: block;
