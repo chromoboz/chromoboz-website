@@ -1764,31 +1764,50 @@ h2 {
   }
 
 
-  .company-layout {
-    grid-template-columns: 1fr;
-  }
+ #about .company-layout {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  align-items: stretch;
+}
 
+#about .company-card {
+  width: calc(100% + 18px);
+  padding: 18px 16px;
+}
 
-  .company-card {
-    width: 100%;
+#about .company-card .company-label {
+  margin-bottom: 10px;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+}
 
-    padding: 30px 24px;
-  }
+#about .company-card h2 {
+  margin-bottom: 12px;
+  font-size: 24px;
+  line-height: 1.05;
+}
 
+#about .company-card > p:not(.company-label) {
+  margin-bottom: 12px;
+  font-size: 11px;
+  line-height: 1.5;
+}
 
-  .company-image {
-    min-height: 330px;
-  }
+#about .company-button {
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 10px;
+}
 
+#about .company-image {
+  min-height: 100%;
+}
 
-  .company-arrow {
-    top: 14px;
-    right: 22px;
-
-    font-size: 76px;
-  }
-
-
+#about .company-arrow {
+  top: 8px;
+  right: 10px;
+  font-size: 42px;
+}
 
   /* ACTIVE PROJECTS */
 
