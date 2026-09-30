@@ -1379,22 +1379,25 @@ p {
 .footer-logo-frame {
   position: relative;
 
-  width: 210px;
-  height: 110px;
+  width: 220px;
+  height: 115px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .footer-logo-frame img {
   position: absolute;
 
-  width: 360px;
+  width: 215px;
   max-width: none;
+  height: auto;
 
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
+
+  object-fit: contain;
 }
 
 .footer-brand p {
