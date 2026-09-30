@@ -121,26 +121,24 @@ p {
 
 .logo {
   position: relative;
-
-  width: 165px;
-  height: 88px;
-
+  width: 190px;
+  height: 96px;
   flex: 0 0 auto;
-
-  overflow: hidden;
+  overflow: visible;
 }
 
 .logo img {
   position: absolute;
-
-  width: 285px;
+  width: 205px;
   max-width: none;
+  height: auto;
 
   left: 50%;
   top: 50%;
 
   transform: translate(-50%, -50%);
 
+  object-fit: contain;
   mix-blend-mode: lighten;
 }
 
