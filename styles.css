@@ -1543,12 +1543,29 @@ p {
   }
 
   .logo {
-  width: 170px;
-  height: 84px;
+  width: 150px !important;
+  height: 72px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  overflow: hidden;
 }
 
 .logo img {
-  width: 180px;
+  position: static !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+
+  left: auto !important;
+  top: auto !important;
+
+  transform: none !important;
+
+  object-fit: contain;
 }
 
   .menu-button {
