@@ -2040,3 +2040,61 @@ p {
     border-bottom: 1px solid var(--line-dark);
   }
 }
+
+
+/* Company section: readable, balanced typography in both languages */
+.company-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 3.4vw, 56px);
+}
+
+.company-label {
+  margin-bottom: 20px;
+  font-size: 11px;
+  letter-spacing: 1.7px;
+}
+
+.company-card h2 {
+  margin-bottom: 26px;
+  font-size: clamp(40px, 3.4vw, 54px);
+  line-height: 1.1;
+}
+
+.company-card > p:not(.company-label) {
+  margin-bottom: 24px;
+  max-width: 58ch;
+  color: #344038;
+  font-size: clamp(18px, 1.25vw, 20px);
+  line-height: 1.85;
+}
+
+.company-card > p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .company-card > p:not(.company-label) {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 600px) {
+  .company-card {
+    padding: 28px 24px;
+  }
+  .company-card h2 {
+    font-size: 36px;
+    margin-bottom: 22px;
+  }
+  .company-card > p:not(.company-label) {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+  }
+  .company-card > p:last-child {
+    margin-bottom: 0;
+  }
+}
